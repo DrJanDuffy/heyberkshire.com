@@ -1,5 +1,6 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { Home, TrendingUp, DollarSign, MapPin, FileText, Users } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -97,6 +98,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </main>
+      <RealScoutListings />
       <Footer />
     </>
   );

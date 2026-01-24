@@ -1,5 +1,6 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import RealScoutListings from "@/components/realscout/RealScoutListings";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -99,6 +100,7 @@ export default function AboutPage() {
           </section>
         </div>
       </main>
+      <RealScoutListings />
       <Footer />
     </>
   );

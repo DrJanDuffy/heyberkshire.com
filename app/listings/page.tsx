@@ -23,16 +23,20 @@ export default function ListingsPage() {
             </p>
           </div>
 
-          {/* RealScout Widget Integration Point */}
+          {/* RealScout Widget - Live MLS Listings */}
           <div className="max-w-7xl mx-auto">
-            <div className="bg-slate-50 rounded-lg p-12 text-center">
-              <p className="text-slate-600 mb-4">
-                Property listings will be integrated with RealScout MLS
-              </p>
-              <p className="text-sm text-slate-500">
-                This section will display live property data from RealScout
-              </p>
-            </div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<realscout-office-listings 
+                  agent-encoded-id="QWdlbnQtMjI1MDUw" 
+                  sort-order="NEWEST" 
+                  listing-status="For Sale" 
+                  property-types=",SFR,MF,TC" 
+                  price-min="500000" 
+                  price-max="800000"
+                ></realscout-office-listings>`,
+              }}
+            />
           </div>
         </div>
       </main>

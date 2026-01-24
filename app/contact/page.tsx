@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
@@ -166,6 +167,7 @@ export default function ContactPage() {
           </div>
         </div>
       </main>
+      <RealScoutListings />
       <Footer />
     </>
   );
