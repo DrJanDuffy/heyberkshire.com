@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/listings`, priority: 0.9, changeFrequency: "daily" as const },
     { url: `${baseUrl}/why-berkshire-hathaway`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/market-report`, priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${baseUrl}/market-update`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/faq`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
