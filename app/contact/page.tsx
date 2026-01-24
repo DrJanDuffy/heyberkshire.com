@@ -67,10 +67,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Phone (Call or Text)</h3>
                     <a
-                      href="tel:+17022221964"
+                      href="tel:+17025001942"
                       className="text-2xl font-bold text-blue-600 hover:text-blue-700"
                     >
-                      (702) 222-1964
+                      (702) 500-1942
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
                       Available 7 days a week, 9am-6pm

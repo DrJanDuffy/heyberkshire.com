@@ -83,7 +83,7 @@ const localBusinessSchema = {
     latitude: "36.1893",
     longitude: "-115.2821",
   },
-  telephone: "+17022221964",
+  telephone: "+17025001942",
   email: "jan@heyberkshire.com",
   priceRange: "$$-$$$$",
   areaServed: [

@@ -19,7 +19,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices 55+ Communities Las Vegas | Active Adult Living",
   description:
-    "Find 55+ communities in Las Vegas with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Sun City, Del Webb, and active adult communities. Call 702-222-1964.",
+    "Find 55+ communities in Las Vegas with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Sun City, Del Webb, and active adult communities. Call (702) 500-1942.",
   keywords: [
     "Berkshire Hathaway HomeServices 55+ communities Las Vegas",
     "55 plus communities Las Vegas",
@@ -583,11 +583,11 @@ export default function FiftyFiveCommunitiesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17022221964"
+                href="tel:+17025001942"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call 702-222-1964
+                Call (702) 500-1942
               </a>
               <Link
                 href="/contact"

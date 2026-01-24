@@ -275,11 +275,11 @@ export default function HomeValuationPage() {
               <div className="text-center">
                 <p className="text-slate-600 mb-4">Prefer to talk? Call Dr. Jan directly:</p>
                 <a
-                  href="tel:+17022221964"
+                  href="tel:+17025001942"
                   className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-bold transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
-                  (702) 222-1964
+                  (702) 500-1942
                 </a>
               </div>
             </div>
