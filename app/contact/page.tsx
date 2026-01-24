@@ -6,7 +6,8 @@ import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Phone, Mail, MapPin, Send, Clock, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Clock, CheckCircle, Calendar } from "lucide-react";
+import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -282,6 +283,28 @@ export default function ContactPage() {
                   principles that built Warren Buffett's empire.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+
+          {/* Calendly Section */}
+          <div className="max-w-4xl mx-auto mt-16">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <Calendar className="h-4 w-4 mr-2" />
+                Book Online
+              </div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                Schedule an Appointment
+              </h2>
+              <p className="text-slate-600 max-w-2xl mx-auto">
+                Prefer to schedule directly? Choose a time that works for you. Whether it's a
+                phone consultation, property showing, or in-person meeting at our{" "}
+                <strong>Berkshire Hathaway HomeServices</strong> office.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+              <CalendlyWidget />
             </div>
           </div>
         </div>
