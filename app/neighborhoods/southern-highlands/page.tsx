@@ -2,25 +2,68 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { Phone, MapPin, Home, Shield, Mountain } from "lucide-react";
+import { Phone, Shield, Mountain, Star, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Southern Highlands Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Berkshire Hathaway HomeServices Southern Highlands | Las Vegas Golf Community",
   description:
-    "Find luxury homes in Southern Highlands, Las Vegas with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Guard-gated golf community. Call 702-222-1964.",
+    "Find Southern Highlands homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this premier golf community. Median price $750K. Call 702-222-1964.",
   keywords: [
+    "Berkshire Hathaway HomeServices Southern Highlands",
     "Southern Highlands homes for sale",
-    "Southern Highlands Las Vegas",
-    "Southern Highlands golf community",
-    "luxury homes Las Vegas",
+    "Southern Highlands golf",
+    "Las Vegas golf community",
     "guard gated Las Vegas",
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the current median home price in Southern Highlands?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "As of January 2026, Southern Highlands' median home price is $750,000, up 7.2% year-over-year. Prices range from $500,000 for non-gated homes to over $3 million in guard-gated sections.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Southern Highlands have guard-gated sections?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Southern Highlands features multiple guard-gated luxury sections including Southern Highlands Golf Club estates and exclusive enclaves with 24/7 security. Non-gated sections also offer excellent value with community amenities.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the Southern Highlands Golf Club like?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Southern Highlands Golf Club features an award-winning Robert Trent Jones Jr. designed course. It offers private membership, a stunning clubhouse, fine dining, and is consistently ranked among Nevada's best golf courses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does Southern Highlands compare to Summerlin?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Southern Highlands offers similar luxury and amenities to Summerlin but in southwest Las Vegas, providing faster access to the Strip, airport, and I-15. It's ideal for buyers who want premier living with southern valley convenience.",
+      },
+    },
   ],
 };
 
 export default function SouthernHighlandsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -41,11 +84,11 @@ export default function SouthernHighlandsPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Southern Highlands Real Estate
+              Berkshire Hathaway HomeServices Southern Highlands
             </h1>
             <p className="text-xl text-slate-600">
-              Luxury living with championship golf. Discover Southern Highlands with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong>.
+              Premier golf course living in southwest Las Vegas. Discover Southern Highlands with{" "}
+              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
@@ -60,68 +103,169 @@ export default function SouthernHighlandsPage() {
                 <div className="text-slate-300 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">+7.2%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">35 Days</div>
+                <div className="text-3xl font-bold text-green-400 mb-1">35 Days</div>
                 <div className="text-slate-300 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">2,227</div>
-                <div className="text-slate-300 text-sm">Acres</div>
+                <div className="text-3xl font-bold mb-1">156</div>
+                <div className="text-slate-300 text-sm">Active Listings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-1">+7.2%</div>
+                <div className="text-slate-300 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
-          {/* About */}
+          {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">About Southern Highlands</h2>
-                <div className="prose prose-lg text-slate-700">
-                  <p>
-                    <strong>Southern Highlands</strong> is one of Las Vegas's most prestigious
-                    master-planned communities, featuring an award-winning championship golf course
-                    designed by Robert Trent Jones Jr. and stunning mountain views.
+            <div className="prose prose-lg max-w-none text-slate-700">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Southern Highlands: Southwest Las Vegas's Premier Master-Planned Community
+              </h2>
+              <p>
+                <strong>Southern Highlands</strong> stands as southwest Las Vegas's answer to Summerlin—a
+                meticulously planned 2,200-acre community centered around an award-winning championship
+                golf course. For buyers seeking luxury living with convenient access to the Strip, airport,
+                and I-15 corridor, <strong>Berkshire Hathaway HomeServices</strong> considers Southern
+                Highlands among Las Vegas's finest residential options.
+              </p>
+              <p>
+                The community's crown jewel is the Southern Highlands Golf Club, featuring a stunning
+                Robert Trent Jones Jr. designed course that winds through the community's terrain.
+                The private club offers members world-class golf, elegant dining, and a social calendar
+                that brings the community together. Even non-golfing residents benefit from the course's
+                presence—golf course views command premium prices and the manicured greens enhance the
+                entire community's aesthetic.
+              </p>
+              <p>
+                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has represented buyers
+                and sellers in Southern Highlands for over two decades. Dr. Jan Duffy understands the
+                community's various sections—from the guard-gated luxury estates surrounding the golf
+                course to the family-friendly neighborhoods in the community's newer phases. Whether
+                you're seeking a golf course lot with Strip views or a spacious family home with top-rated
+                schools, BHHS has the local expertise to guide your search.
+              </p>
+
+              {/* Community Highlights */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <div className="grid md:grid-cols-2 gap-8 not-prose">
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <Star className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Championship Golf Course</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    The Robert Trent Jones Jr. designed course at Southern Highlands Golf Club is
+                    consistently rated among Nevada's finest. The private club offers members exceptional
+                    playing conditions year-round, a fully appointed clubhouse, fine dining, and a
+                    calendar of social events. Golf course homes enjoy premium values and stunning views.
                   </p>
-                  <p>
-                    The community offers a variety of living options from maintenance-free condos
-                    to multi-million dollar custom estates. Guard-gated sections provide enhanced
-                    security and exclusivity for luxury buyers.
-                  </p>
-                  <p>
-                    <strong>Berkshire Hathaway HomeServices</strong> is the ideal partner for
-                    Southern Highlands transactions, where the BHHS name commands respect and
-                    attracts qualified buyers.
+                </div>
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <Shield className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Guard-Gated Luxury Sections</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    Multiple guard-gated enclaves within Southern Highlands offer enhanced security
+                    and exclusivity. These sections feature custom and semi-custom homes on larger lots,
+                    with architectural standards ensuring estate-quality construction. 24/7 security
+                    provides residents peace of mind and protects property values.
                   </p>
                 </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="font-bold text-slate-900 text-lg mb-4">Community Highlights</h3>
-                {[
-                  { icon: Shield, text: "Guard-gated luxury sections" },
-                  { icon: Mountain, text: "Panoramic mountain views" },
-                  { icon: Home, text: "RTJ Jr. championship golf course" },
-                  { icon: MapPin, text: "Easy Strip & airport access" },
-                ].map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.text} className="flex items-center bg-slate-50 p-4 rounded-lg">
-                      <Icon className="h-6 w-6 text-blue-600 mr-4" />
-                      <span className="text-slate-700">{item.text}</span>
-                    </div>
-                  );
-                })}
+
+              <p className="mt-8">
+                The Southern Highlands market currently shows <strong>156 active listings</strong> with
+                homes averaging <strong>35 days on market</strong>. The median price of <strong>$750,000</strong>
+                reflects strong appreciation of 7.2% year-over-year, driven by demand from buyers seeking
+                luxury without the premium prices of The Ridges or MacDonald Highlands. Properties range
+                from $500,000 in non-gated sections to over $3 million for golf course estates.
+              </p>
+              <p>
+                Choosing <strong>Berkshire Hathaway HomeServices</strong> for Southern Highlands means
+                working with agents who understand the community's unique value proposition. Dr. Jan Duffy
+                can explain the differences between various sections, which lots offer the best views,
+                and how HOA fees vary across the community. This knowledge, combined with the BHHS
+                reputation for excellence, ensures Southern Highlands buyers and sellers receive
+                exceptional service.
+              </p>
+            </div>
+          </section>
+
+          {/* Expert Quote */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
+              <blockquote className="text-lg text-slate-700 italic mb-4">
+                "Southern Highlands delivers luxury living at prices that often surprise buyers—especially
+                those relocating from California. You get championship golf, guard-gated security, mountain
+                views, and excellent schools, all just 15 minutes from the Strip. As a Berkshire Hathaway
+                HomeServices agent, I help clients see beyond the golf course to the community's full potential."
+              </blockquote>
+              <cite className="text-slate-900 font-semibold">
+                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
+              </cite>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Frequently Asked Questions About Southern Highlands
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What is the current median home price in Southern Highlands?
+                </h3>
+                <p className="text-slate-600">
+                  As of January 2026, Southern Highlands' median home price is $750,000, up 7.2%
+                  year-over-year. Prices range from $500,000 for non-gated homes to over $3 million
+                  in guard-gated sections.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Does Southern Highlands have guard-gated sections?
+                </h3>
+                <p className="text-slate-600">
+                  Yes, Southern Highlands features multiple guard-gated luxury sections including
+                  Southern Highlands Golf Club estates and exclusive enclaves with 24/7 security.
+                  Non-gated sections also offer excellent value with community amenities.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What is the Southern Highlands Golf Club like?
+                </h3>
+                <p className="text-slate-600">
+                  Southern Highlands Golf Club features an award-winning Robert Trent Jones Jr. designed
+                  course. It offers private membership, a stunning clubhouse, fine dining, and is
+                  consistently ranked among Nevada's best golf courses.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  How does Southern Highlands compare to Summerlin?
+                </h3>
+                <p className="text-slate-600">
+                  Southern Highlands offers similar luxury and amenities to Summerlin but in southwest
+                  Las Vegas, providing faster access to the Strip, airport, and I-15. It's ideal for
+                  buyers who want premier living with southern valley convenience.
+                </p>
               </div>
             </div>
           </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Explore Southern Highlands</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Explore Southern Highlands Living
+            </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Interested in Southern Highlands luxury living? Contact Dr. Jan Duffy today.
+              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Southern Highlands specialist,
+              for expert guidance in this premier golf community.
             </p>
             <a
               href="tel:+17022221964"

@@ -2,25 +2,68 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { Phone, Home, Waves, GraduationCap, TreePine } from "lucide-react";
+import { Phone, Waves, TreePine, GraduationCap, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Inspirada Henderson Homes for Sale | Berkshire Hathaway HomeServices",
+  title: "Berkshire Hathaway HomeServices Inspirada | Henderson Resort Living",
   description:
-    "Find homes in Inspirada, Henderson with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Resort-style master-planned community. Call 702-222-1964.",
+    "Find Inspirada homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's resort-style community. Median price $525K. Call 702-222-1964.",
   keywords: [
+    "Berkshire Hathaway HomeServices Inspirada",
     "Inspirada homes for sale",
     "Inspirada Henderson",
-    "Inspirada real estate",
     "Henderson master planned",
-    "new homes Henderson",
+    "resort style community",
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the current median home price in Inspirada?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with established landscaping.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What amenities does Inspirada offer residents?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Inspirada features resort-style pools with water features, miles of walking trails, multiple parks, sports courts, and community gathering spaces. The HOA maintains these amenities to resort standards, creating a vacation-like atmosphere.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How are the schools in Inspirada?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Inspirada is served by highly-rated Henderson schools including newer facilities built specifically for the growing community. The area attracts families specifically for its educational options and family-friendly environment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Inspirada a good investment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Inspirada has shown strong appreciation as one of Las Vegas's top-selling master-planned communities. The combination of resort amenities, Henderson location, and continued development suggests ongoing demand and value growth.",
+      },
+    },
   ],
 };
 
 export default function InspiradaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -41,18 +84,18 @@ export default function InspiradaPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Inspirada Real Estate
+              Berkshire Hathaway HomeServices Inspirada
             </h1>
             <p className="text-xl text-slate-600">
-              Henderson's resort-style master-planned community. Discover Inspirada with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong>.
+              Resort-style living in Henderson. Discover Inspirada with{" "}
+              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Inspirada Market | January 2026
+              Inspirada Real Estate Market | January 2026
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -60,67 +103,170 @@ export default function InspiradaPage() {
                 <div className="text-slate-300 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">+5.0%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">23 Days</div>
+                <div className="text-3xl font-bold text-green-400 mb-1">23 Days</div>
                 <div className="text-slate-300 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">2,000</div>
-                <div className="text-slate-300 text-sm">Acres</div>
+                <div className="text-3xl font-bold mb-1">98</div>
+                <div className="text-slate-300 text-sm">Active Listings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-1">+5.0%</div>
+                <div className="text-slate-300 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
-          {/* About */}
+          {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">About Inspirada</h2>
-                <div className="prose prose-lg text-slate-700">
-                  <p>
-                    <strong>Inspirada</strong> brings resort-style living to Henderson with its
-                    award-winning master-planned community featuring pools, parks, trails, and
-                    top-rated schools—all designed for active, family-oriented lifestyles.
+            <div className="prose prose-lg max-w-none text-slate-700">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Inspirada: Henderson's Award-Winning Resort-Style Community
+              </h2>
+              <p>
+                <strong>Inspirada</strong> redefines what a master-planned community can be. This
+                2,000-acre development in Henderson consistently ranks among the nation's top-selling
+                communities, and for good reason: Inspirada delivers resort-style amenities that make
+                every day feel like a vacation. <strong>Berkshire Hathaway HomeServices</strong>
+                is proud to represent buyers and sellers in this exceptional community.
+              </p>
+              <p>
+                The community's amenity package rivals many resorts. Multiple pools feature water
+                slides, splash pads, and cabanas. Miles of walking and biking trails wind through
+                the community, connecting to neighborhood parks and gathering spaces. Sports courts,
+                fitness facilities, and community events create an active, engaged lifestyle that
+                brings neighbors together. These amenities aren't afterthoughts—they're central
+                to Inspirada's identity.
+              </p>
+              <p>
+                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> provides free
+                buyer representation on Inspirada new construction purchases. With multiple builders
+                offering homes in the community, navigating options can be overwhelming. Dr. Jan Duffy
+                helps buyers compare builders, negotiate upgrades, and avoid common new construction
+                pitfalls. For resales, BHHS agents identify properties where previous owners made
+                smart upgrade decisions, delivering better value than comparable new construction.
+              </p>
+
+              {/* Community Highlights */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <div className="grid md:grid-cols-2 gap-8 not-prose">
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <Waves className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Resort-Style Pools & Amenities</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    Inspirada's pools aren't typical community pools—they're resort experiences.
+                    Water slides, splash pads for kids, lap lanes for exercise, and shaded cabanas
+                    for relaxation create a vacation atmosphere steps from your front door. The
+                    HOA maintains these facilities to exceptional standards year-round.
                   </p>
-                  <p>
-                    The community features multiple resort-style pools, miles of walking trails,
-                    and innovative home designs from top builders. It's consistently ranked among
-                    the best-selling master-planned communities in Las Vegas.
-                  </p>
-                  <p>
-                    <strong>Berkshire Hathaway HomeServices</strong> offers free buyer
-                    representation on all Inspirada new construction and resale homes.
+                </div>
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <TreePine className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Trails, Parks & Active Living</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    Miles of walking and biking trails connect Inspirada's neighborhoods, parks,
+                    and amenity centers. Whether you're training for a marathon or taking an evening
+                    stroll, the trail system encourages an active lifestyle. Community events—from
+                    outdoor movies to fitness classes—bring neighbors together throughout the year.
                   </p>
                 </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="font-bold text-slate-900 text-lg mb-4">Inspirada Amenities</h3>
-                {[
-                  { icon: Waves, text: "Resort-style community pools" },
-                  { icon: TreePine, text: "Miles of walking trails" },
-                  { icon: GraduationCap, text: "Top-rated Henderson schools" },
-                  { icon: Home, text: "New & resale homes available" },
-                ].map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.text} className="flex items-center bg-slate-50 p-4 rounded-lg">
-                      <Icon className="h-6 w-6 text-blue-600 mr-4" />
-                      <span className="text-slate-700">{item.text}</span>
-                    </div>
-                  );
-                })}
+
+              <p className="mt-8">
+                The current Inspirada market shows <strong>98 active listings</strong> with homes
+                averaging <strong>23 days on market</strong>—reflecting strong demand for this
+                sought-after community. The median price of <strong>$525,000</strong> represents
+                solid 5.0% year-over-year appreciation. New construction from builders like Toll
+                Brothers, Lennar, and Beazer ranges from $450,000 to $750,000, while resales with
+                established yards and upgraded features offer compelling alternatives.
+              </p>
+              <p>
+                Choosing <strong>Berkshire Hathaway HomeServices</strong> for your Inspirada purchase
+                means working with agents who understand the community's various neighborhoods, which
+                builders offer the best quality, and which lots provide the best value. Dr. Jan Duffy
+                has helped dozens of families find their Inspirada homes, and that experience
+                translates into better outcomes for buyers navigating this popular community.
+              </p>
+            </div>
+          </section>
+
+          {/* Expert Quote */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
+              <blockquote className="text-lg text-slate-700 italic mb-4">
+                "Inspirada isn't just a place to live—it's a lifestyle. Families move here for the
+                pools, the trails, and the community events that make weekends special. As a
+                Berkshire Hathaway HomeServices agent, I help clients find the specific neighborhood
+                within Inspirada that matches how they want to live, whether that's close to the
+                main pool complex or on a quiet cul-de-sac backing to open space."
+              </blockquote>
+              <cite className="text-slate-900 font-semibold">
+                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
+              </cite>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Frequently Asked Questions About Inspirada
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What is the current median home price in Inspirada?
+                </h3>
+                <p className="text-slate-600">
+                  As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year.
+                  New construction ranges from $450,000 to $750,000, while resales offer additional
+                  options with established landscaping.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What amenities does Inspirada offer residents?
+                </h3>
+                <p className="text-slate-600">
+                  Inspirada features resort-style pools with water features, miles of walking trails,
+                  multiple parks, sports courts, and community gathering spaces. The HOA maintains
+                  these amenities to resort standards, creating a vacation-like atmosphere.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  How are the schools in Inspirada?
+                </h3>
+                <p className="text-slate-600">
+                  Inspirada is served by highly-rated Henderson schools including newer facilities
+                  built specifically for the growing community. The area attracts families specifically
+                  for its educational options and family-friendly environment.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Is Inspirada a good investment?
+                </h3>
+                <p className="text-slate-600">
+                  Inspirada has shown strong appreciation as one of Las Vegas's top-selling master-planned
+                  communities. The combination of resort amenities, Henderson location, and continued
+                  development suggests ongoing demand and value growth.
+                </p>
               </div>
             </div>
           </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Find Your Inspirada Home</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Experience Inspirada Living
+            </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Experience resort-style living in Henderson. Call Dr. Jan Duffy for Inspirada homes.
+              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Inspirada specialist,
+              for expert guidance in Henderson's premier resort-style community.
             </p>
             <a
               href="tel:+17022221964"

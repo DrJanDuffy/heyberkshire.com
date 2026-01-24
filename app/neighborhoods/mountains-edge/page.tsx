@@ -2,25 +2,68 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { Phone, Home, Mountain, TreePine, DollarSign } from "lucide-react";
+import { Phone, Mountain, TreePine, DollarSign, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mountains Edge Las Vegas Homes | Berkshire Hathaway HomeServices",
+  title: "Berkshire Hathaway HomeServices Mountains Edge | Southwest Las Vegas",
   description:
-    "Find homes in Mountains Edge, Las Vegas with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Southwest Las Vegas master-planned community. Call 702-222-1964.",
+    "Find Mountains Edge homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this southwest Las Vegas community. Median price $475K. Call 702-222-1964.",
   keywords: [
+    "Berkshire Hathaway HomeServices Mountains Edge",
     "Mountains Edge homes for sale",
     "Mountains Edge Las Vegas",
     "southwest Las Vegas homes",
-    "Mountains Edge real estate",
-    "affordable Las Vegas homes",
+    "affordable Las Vegas",
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the current median home price in Mountains Edge?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "As of January 2026, Mountains Edge's median home price is $475,000, up 4.5% year-over-year. Prices range from $380,000 for smaller homes to over $750,000 for larger properties with mountain and Strip views.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes Mountains Edge different from other Las Vegas communities?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mountains Edge offers the largest park in the Las Vegas Valley—the 120-acre Exploration Peak Park with stunning views—plus master-planned amenities at prices below Summerlin or Henderson. It's ideal for buyers seeking value without sacrificing lifestyle.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How is the commute from Mountains Edge?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mountains Edge provides easy access to I-215 and I-15, making commutes to the Strip (15-20 minutes), airport (20 minutes), and Henderson (25 minutes) straightforward. The southwest location offers multiple route options.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is new construction available in Mountains Edge?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, several builders offer new construction in Mountains Edge's expanding areas. BHHS provides free buyer representation on new construction purchases, helping buyers navigate builder contracts and negotiate upgrades.",
+      },
+    },
   ],
 };
 
 export default function MountainsEdgePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -41,11 +84,11 @@ export default function MountainsEdgePage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Mountains Edge Real Estate
+              Berkshire Hathaway HomeServices Mountains Edge
             </h1>
             <p className="text-xl text-slate-600">
-              Southwest Las Vegas's growing master-planned community. Find your Mountains Edge home
-              with <strong>Berkshire Hathaway HomeServices</strong>.
+              Affordable luxury in southwest Las Vegas. Find your Mountains Edge home with{" "}
+              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
@@ -60,67 +103,170 @@ export default function MountainsEdgePage() {
                 <div className="text-slate-300 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">+4.5%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">27 Days</div>
+                <div className="text-3xl font-bold text-green-400 mb-1">27 Days</div>
                 <div className="text-slate-300 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">3,500</div>
-                <div className="text-slate-300 text-sm">Acres</div>
+                <div className="text-3xl font-bold mb-1">234</div>
+                <div className="text-slate-300 text-sm">Active Listings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-1">+4.5%</div>
+                <div className="text-slate-300 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
-          {/* About */}
+          {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">About Mountains Edge</h2>
-                <div className="prose prose-lg text-slate-700">
-                  <p>
-                    <strong>Mountains Edge</strong> is southwest Las Vegas's largest master-planned
-                    community, offering mountain views, extensive parks, and more affordable luxury
-                    compared to Summerlin or Henderson.
+            <div className="prose prose-lg max-w-none text-slate-700">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Mountains Edge: Southwest Las Vegas's Best Value for Master-Planned Living
+              </h2>
+              <p>
+                <strong>Mountains Edge</strong> delivers what many Las Vegas buyers are seeking:
+                master-planned community amenities at prices significantly below Summerlin or
+                Henderson. This 3,500-acre community in southwest Las Vegas offers mountain views,
+                exceptional parks, and modern homes—without the premium prices of the valley's
+                more established luxury markets. <strong>Berkshire Hathaway HomeServices</strong>
+                helps value-conscious buyers discover Mountains Edge's potential.
+              </p>
+              <p>
+                The community's crown jewel is Exploration Peak Park—120 acres of open space that
+                stands as the Las Vegas Valley's largest park. From the park's summit, residents
+                enjoy panoramic views of the Las Vegas Strip, surrounding mountains, and the desert
+                floor stretching to the horizon. It's a daily reminder that Mountains Edge offers
+                something special: the combination of suburban convenience with genuine connection
+                to Southern Nevada's natural beauty.
+              </p>
+              <p>
+                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> serves Mountains
+                Edge buyers with the same commitment to excellence we bring to the valley's luxury
+                markets. Dr. Jan Duffy understands that value doesn't mean compromise—it means
+                finding the right home at the right price. For families priced out of Summerlin
+                or Henderson, Mountains Edge delivers comparable lifestyle at accessible prices.
+              </p>
+
+              {/* Community Highlights */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <div className="grid md:grid-cols-2 gap-8 not-prose">
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <Mountain className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Exploration Peak Park</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    The valley's largest park spans 120 acres with hiking trails, picnic areas,
+                    playgrounds, and an iconic summit offering 360-degree views of Las Vegas. On
+                    clear days, you can see the Strip's towers glittering against the mountain
+                    backdrop—a view that never gets old. This park alone makes Mountains Edge unique.
                   </p>
-                  <p>
-                    The 3,500-acre community features the 120-acre Exploration Peak Park with
-                    stunning views of the Las Vegas Strip and surrounding mountains. A mix of new
-                    construction and resale homes provides options for every budget.
-                  </p>
-                  <p>
-                    <strong>Berkshire Hathaway HomeServices</strong> helps buyers find value in
-                    Mountains Edge while still enjoying the benefits of master-planned living.
+                </div>
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <DollarSign className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Exceptional Value</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    Mountains Edge's median price of $475,000 is roughly $150,000 less than Summerlin
+                    and $50,000 less than Henderson for comparable homes. Buyers get modern
+                    construction, master-planned amenities, and mountain views at prices that
+                    allow for better financial flexibility. It's affordable luxury done right.
                   </p>
                 </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="font-bold text-slate-900 text-lg mb-4">Community Features</h3>
-                {[
-                  { icon: Mountain, text: "Mountain views & Exploration Peak Park" },
-                  { icon: DollarSign, text: "Affordable luxury living" },
-                  { icon: TreePine, text: "Extensive parks system" },
-                  { icon: Home, text: "New construction available" },
-                ].map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.text} className="flex items-center bg-slate-50 p-4 rounded-lg">
-                      <Icon className="h-6 w-6 text-blue-600 mr-4" />
-                      <span className="text-slate-700">{item.text}</span>
-                    </div>
-                  );
-                })}
+
+              <p className="mt-8">
+                The current market shows <strong>234 active listings</strong> with homes averaging
+                <strong> 27 days on market</strong>. The median price of <strong>$475,000</strong>
+                represents steady 4.5% year-over-year appreciation—sustainable growth that suggests
+                continuing value. Properties range from $380,000 for entry-level homes to over
+                $750,000 for larger properties with premium views and upgraded features.
+              </p>
+              <p>
+                Working with <strong>Berkshire Hathaway HomeServices</strong> in Mountains Edge means
+                getting honest guidance about where the community offers the best value. Dr. Jan Duffy
+                helps buyers identify neighborhoods with the strongest appreciation potential, homes
+                with the best views, and properties that represent genuine value rather than
+                superficial appeal. That expertise—combined with the BHHS commitment to client
+                service—ensures Mountains Edge buyers make informed decisions.
+              </p>
+            </div>
+          </section>
+
+          {/* Expert Quote */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
+              <blockquote className="text-lg text-slate-700 italic mb-4">
+                "Mountains Edge is where I send buyers who want master-planned living without the
+                Summerlin price tag. The park is incredible, the homes are modern, and the value
+                is undeniable. As a Berkshire Hathaway HomeServices agent, I help clients see
+                that finding the right home isn't about spending the most—it's about spending wisely."
+              </blockquote>
+              <cite className="text-slate-900 font-semibold">
+                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
+              </cite>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Frequently Asked Questions About Mountains Edge
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What is the current median home price in Mountains Edge?
+                </h3>
+                <p className="text-slate-600">
+                  As of January 2026, Mountains Edge's median home price is $475,000, up 4.5%
+                  year-over-year. Prices range from $380,000 for smaller homes to over $750,000
+                  for larger properties with mountain and Strip views.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What makes Mountains Edge different from other Las Vegas communities?
+                </h3>
+                <p className="text-slate-600">
+                  Mountains Edge offers the largest park in the Las Vegas Valley—the 120-acre
+                  Exploration Peak Park with stunning views—plus master-planned amenities at prices
+                  below Summerlin or Henderson. It's ideal for buyers seeking value without
+                  sacrificing lifestyle.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  How is the commute from Mountains Edge?
+                </h3>
+                <p className="text-slate-600">
+                  Mountains Edge provides easy access to I-215 and I-15, making commutes to the
+                  Strip (15-20 minutes), airport (20 minutes), and Henderson (25 minutes)
+                  straightforward. The southwest location offers multiple route options.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Is new construction available in Mountains Edge?
+                </h3>
+                <p className="text-slate-600">
+                  Yes, several builders offer new construction in Mountains Edge's expanding areas.
+                  BHHS provides free buyer representation on new construction purchases, helping
+                  buyers navigate builder contracts and negotiate upgrades.
+                </p>
               </div>
             </div>
           </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Find Your Mountains Edge Home</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Discover Mountains Edge Value
+            </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Looking for value in southwest Las Vegas? Call Dr. Jan Duffy today.
+              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Mountains Edge specialist,
+              for expert guidance in finding exceptional value in southwest Las Vegas.
             </p>
             <a
               href="tel:+17022221964"

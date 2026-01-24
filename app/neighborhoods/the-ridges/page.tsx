@@ -2,25 +2,68 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { Phone, Shield, Star, Eye, Home, Award } from "lucide-react";
+import { Phone, Shield, Star, Mountain, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Ridges Summerlin Luxury Homes | Berkshire Hathaway HomeServices",
+  title: "Berkshire Hathaway HomeServices The Ridges | Las Vegas Luxury Real Estate",
   description:
-    "Discover The Ridges, Las Vegas's most exclusive luxury community. Dr. Jan Duffy at Berkshire Hathaway HomeServices specializes in Ridges estates from $2M-$15M+. Call 702-222-1964.",
+    "Find luxury homes in The Ridges with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call 702-222-1964.",
   keywords: [
-    "The Ridges Las Vegas",
+    "Berkshire Hathaway HomeServices The Ridges",
+    "The Ridges homes for sale",
     "The Ridges Summerlin",
-    "Las Vegas luxury homes",
-    "celebrity homes Las Vegas",
-    "ultra luxury real estate Las Vegas",
+    "luxury homes Las Vegas",
+    "guard gated Summerlin",
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the current median home price in The Ridges?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "As of January 2026, The Ridges median home price is $2.5 million. Properties range from $1.5 million for smaller homes to over $15 million for custom estates with Strip and Red Rock views.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How exclusive is The Ridges community?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Ridges is one of Las Vegas's most exclusive communities with 24/7 guard-gated security, only 900 home sites across six distinct villages, and strict architectural guidelines ensuring estate-quality construction throughout.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What celebrities and executives live in The Ridges?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "While privacy prevents naming residents, The Ridges is known for attracting professional athletes, entertainment executives, casino industry leaders, and high-net-worth individuals seeking privacy and luxury in Las Vegas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why use Berkshire Hathaway HomeServices for luxury home purchases?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "BHHS represents a brand synonymous with trust and discretion—essential in luxury transactions. Our agents like Dr. Jan Duffy have access to off-market listings, understand high-end buyer requirements, and provide the confidentiality luxury clients expect.",
+      },
+    },
   ],
 };
 
 export default function TheRidgesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -41,19 +84,18 @@ export default function TheRidgesPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              The Ridges Luxury Real Estate
+              Berkshire Hathaway HomeServices The Ridges
             </h1>
             <p className="text-xl text-slate-600">
-              Las Vegas's most exclusive address. Ultra-luxury estates in Summerlin's premier
-              guard-gated community—available through{" "}
-              <strong>Berkshire Hathaway HomeServices</strong>.
+              Las Vegas's most prestigious address. Experience The Ridges luxury with{" "}
+              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              The Ridges Market Stats | January 2026
+              The Ridges Luxury Market | January 2026
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -61,104 +103,186 @@ export default function TheRidgesPage() {
                 <div className="text-slate-300 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">+8.5%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">$2M-$15M+</div>
-                <div className="text-slate-300 text-sm">Price Range</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">60 Days</div>
+                <div className="text-3xl font-bold text-green-400 mb-1">67 Days</div>
                 <div className="text-slate-300 text-sm">Avg. Days on Market</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold mb-1">42</div>
+                <div className="text-slate-300 text-sm">Active Listings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-1">+8.2%</div>
+                <div className="text-slate-300 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
-          {/* About The Ridges */}
+          {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                  About The Ridges
-                </h2>
-                <div className="prose prose-lg text-slate-700">
-                  <p>
-                    <strong>The Ridges</strong> represents the pinnacle of Las Vegas luxury living.
-                    This ultra-exclusive guard-gated community in Summerlin is home to celebrities,
-                    executives, and discerning buyers who demand the absolute best.
+            <div className="prose prose-lg max-w-none text-slate-700">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                The Ridges: Las Vegas's Ultimate Address for Discerning Buyers
+              </h2>
+              <p>
+                <strong>The Ridges</strong> represents the pinnacle of Las Vegas luxury living. Nestled
+                within Summerlin along the foothills of Red Rock Canyon, this ultra-exclusive guard-gated
+                community offers estate-quality homes with panoramic views of the Las Vegas Strip, the
+                surrounding mountains, and the pristine desert landscape. When the most discerning buyers
+                search for Las Vegas luxury, they turn to <strong>Berkshire Hathaway HomeServices</strong>—the
+                brand that matches The Ridges' standard of excellence.
+              </p>
+              <p>
+                The Ridges comprises six distinctive villages—Bear's Best, Falcon Ridge, Azure, Talon Ridge,
+                Silver Ridge, and Eagle Hills—each offering its own character while maintaining the
+                community's legendary standards. With only 900 home sites across 793 acres, exclusivity is
+                built into The Ridges' DNA. Strict architectural guidelines ensure that every home meets
+                the community's exacting standards, protecting property values and ensuring a cohesive
+                aesthetic throughout.
+              </p>
+              <p>
+                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has represented buyers
+                and sellers in The Ridges since the community's inception. Dr. Jan Duffy understands that
+                luxury transactions require more than market knowledge—they demand discretion, sophisticated
+                marketing, and access to qualified buyers worldwide. The BHHS global network connects The
+                Ridges properties with high-net-worth individuals actively seeking premier real estate
+                investments in Las Vegas.
+              </p>
+
+              {/* Community Highlights */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <div className="grid md:grid-cols-2 gap-8 not-prose">
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <Shield className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Unmatched Privacy & Security</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    The Ridges offers 24/7 guard-gated security with roving patrols, giving residents
+                    the peace of mind they expect at this price point. The community's exclusivity—only
+                    900 homes across nearly 800 acres—ensures privacy that's impossible to find in
+                    higher-density developments. Many residents include celebrities, executives, and
+                    individuals for whom privacy is non-negotiable.
                   </p>
-                  <p>
-                    With custom estates ranging from $2 million to over $15 million, The Ridges
-                    offers architectural masterpieces featuring panoramic Strip and mountain views,
-                    resort-style amenities, and access to Bear's Best Golf Club.
-                  </p>
-                  <p>
-                    <strong>Berkshire Hathaway HomeServices</strong> is uniquely positioned to
-                    represent buyers and sellers at this level. The BHHS name commands respect and
-                    attracts serious, qualified buyers—essential in the ultra-luxury market.
+                </div>
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <Mountain className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Unrivaled Views & Location</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    Positioned along Red Rock Canyon's foothills, The Ridges offers views that no other
+                    Las Vegas community can match. Properties feature vistas of the Strip's glittering
+                    skyline, the rugged Spring Mountains, and the desert floor stretching to the horizon.
+                    Bear's Best Golf Club, designed by Jack Nicklaus, winds through the community, adding
+                    another layer of prestige.
                   </p>
                 </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="font-bold text-slate-900 text-lg mb-4">The Ridges Lifestyle</h3>
-                {[
-                  { icon: Shield, text: "24/7 guard-gated security" },
-                  { icon: Star, text: "Celebrity and executive residents" },
-                  { icon: Eye, text: "Panoramic Strip & mountain views" },
-                  { icon: Award, text: "Bear's Best Golf Club access" },
-                  { icon: Home, text: "Custom architectural estates" },
-                ].map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.text} className="flex items-center bg-slate-50 p-4 rounded-lg">
-                      <Icon className="h-6 w-6 text-blue-600 mr-4" />
-                      <span className="text-slate-700">{item.text}</span>
-                    </div>
-                  );
-                })}
-              </div>
+
+              <p className="mt-8">
+                The current Ridges market shows <strong>42 active listings</strong> with homes averaging
+                <strong> 67 days on market</strong>—longer than the valley average, reflecting the careful
+                consideration luxury buyers give to properties at this level. The median price of
+                <strong> $2.5 million</strong> represents exceptional value compared to comparable
+                communities in California or Hawaii. Properties range from $1.5 million to over $15
+                million for the most spectacular custom estates.
+              </p>
+              <p>
+                Working with <strong>Berkshire Hathaway HomeServices</strong> in The Ridges means working
+                with agents who understand that luxury isn't just about price—it's about lifestyle,
+                privacy, and attention to detail. Dr. Jan Duffy provides the white-glove service that
+                Ridges buyers and sellers expect, from confidential off-market transactions to coordination
+                with architects, designers, and property managers. When the stakes are measured in millions,
+                the Berkshire Hathaway name provides the trust and expertise that matters.
+              </p>
             </div>
           </section>
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-50 rounded-lg p-8">
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Luxury buyers expect discretion, market expertise, and flawless execution. In The
-                Ridges, one wrong move can cost hundreds of thousands of dollars. That's why the
-                Berkshire Hathaway HomeServices name matters at this level—it tells buyers and
-                sellers alike that they're working with the best."
+                "The Ridges attracts clients who expect the very best—and they recognize Berkshire Hathaway
+                HomeServices as a brand that matches their standards. In luxury real estate, discretion and
+                trust are everything. My clients know their privacy is protected and their interests come first.
+                That's the BHHS difference in high-end transactions."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties
+                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
             </div>
           </section>
 
-          {/* CTA */}
-          <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Explore The Ridges
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Frequently Asked Questions About The Ridges
             </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Interested in Las Vegas's most exclusive community? Dr. Jan Duffy provides
-              confidential, white-glove service for Ridges buyers and sellers.
+            <div className="space-y-6">
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What is the current median home price in The Ridges?
+                </h3>
+                <p className="text-slate-600">
+                  As of January 2026, The Ridges median home price is $2.5 million. Properties range from
+                  $1.5 million for smaller homes to over $15 million for custom estates with Strip and
+                  Red Rock views.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  How exclusive is The Ridges community?
+                </h3>
+                <p className="text-slate-600">
+                  The Ridges is one of Las Vegas's most exclusive communities with 24/7 guard-gated security,
+                  only 900 home sites across six distinct villages, and strict architectural guidelines
+                  ensuring estate-quality construction throughout.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What celebrities and executives live in The Ridges?
+                </h3>
+                <p className="text-slate-600">
+                  While privacy prevents naming residents, The Ridges is known for attracting professional
+                  athletes, entertainment executives, casino industry leaders, and high-net-worth individuals
+                  seeking privacy and luxury in Las Vegas.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Why use Berkshire Hathaway HomeServices for luxury home purchases?
+                </h3>
+                <p className="text-slate-600">
+                  BHHS represents a brand synonymous with trust and discretion—essential in luxury
+                  transactions. Our agents like Dr. Jan Duffy have access to off-market listings, understand
+                  high-end buyer requirements, and provide the confidentiality luxury clients expect.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA */}
+          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Experience The Ridges Luxury
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Contact Dr. Jan Duffy for a confidential consultation about buying or selling
+              in Las Vegas's most prestigious community.
             </p>
             <a
               href="tel:+17022221964"
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
+              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call 702-222-1964
             </a>
-            <p className="mt-4 text-slate-400 text-sm">
+            <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-
-        {/* Last Updated */}
         <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
       </main>
       <RealScoutListings />

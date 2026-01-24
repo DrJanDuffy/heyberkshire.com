@@ -2,25 +2,68 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { Phone, Home, Mountain, ShoppingBag, Users } from "lucide-react";
+import { Phone, Mountain, Users, ShoppingBag, Home as HomeIcon } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Centennial Hills Las Vegas Homes | Berkshire Hathaway HomeServices",
+  title: "Berkshire Hathaway HomeServices Centennial Hills | Las Vegas Homes",
   description:
-    "Find homes in Centennial Hills, Las Vegas with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Family-friendly northwest community. Call 702-222-1964.",
+    "Find Centennial Hills homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this established northwest community. Median price $495K. Call 702-222-1964.",
   keywords: [
+    "Berkshire Hathaway HomeServices Centennial Hills",
     "Centennial Hills homes for sale",
     "Centennial Hills Las Vegas",
     "northwest Las Vegas real estate",
-    "Centennial Hills homes",
     "family homes Las Vegas",
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the current median home price in Centennial Hills?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "As of January 2026, Centennial Hills' median home price is $495,000, up 4.8% year-over-year. Prices range from $380,000 for smaller homes to over $900,000 for larger properties with mountain views.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Centennial Hills a good family neighborhood?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Centennial Hills is one of Las Vegas's best family neighborhoods with highly-rated schools, safe streets, multiple parks including Centennial Hills Park, and convenient shopping at Centennial Center.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How far is Centennial Hills from the Las Vegas Strip?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Centennial Hills is approximately 20-25 minutes from the Strip via US-95. The community offers easy freeway access while maintaining a suburban, family-oriented atmosphere away from tourist areas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What shopping and amenities are near Centennial Hills?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Centennial Center provides extensive shopping, dining, and entertainment including Target, Costco, and numerous restaurants. Downtown Summerlin is also easily accessible for additional retail and entertainment options.",
+      },
+    },
   ],
 };
 
 export default function CentennialHillsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -41,11 +84,11 @@ export default function CentennialHillsPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Centennial Hills Real Estate
+              Berkshire Hathaway HomeServices Centennial Hills
             </h1>
             <p className="text-xl text-slate-600">
-              Northwest Las Vegas family living. Find your Centennial Hills home with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong>.
+              Family-friendly northwest Las Vegas living. Find your Centennial Hills home with{" "}
+              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
@@ -60,68 +103,170 @@ export default function CentennialHillsPage() {
                 <div className="text-slate-300 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">+4.8%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">25 Days</div>
+                <div className="text-3xl font-bold text-green-400 mb-1">25 Days</div>
                 <div className="text-slate-300 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">A+</div>
-                <div className="text-slate-300 text-sm">Family Rating</div>
+                <div className="text-3xl font-bold mb-1">203</div>
+                <div className="text-slate-300 text-sm">Active Listings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-1">+4.8%</div>
+                <div className="text-slate-300 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
-          {/* About */}
+          {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">About Centennial Hills</h2>
-                <div className="prose prose-lg text-slate-700">
-                  <p>
-                    <strong>Centennial Hills</strong> is one of northwest Las Vegas's most
-                    established and desirable family communities. Located near the mountains, the
-                    area offers quick access to outdoor recreation while maintaining excellent
-                    suburban amenities.
+            <div className="prose prose-lg max-w-none text-slate-700">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Centennial Hills: Northwest Las Vegas's Established Family Community
+              </h2>
+              <p>
+                <strong>Centennial Hills</strong> represents the best of established northwest Las Vegas
+                living. While newer communities like Skye Canyon attract attention, Centennial Hills
+                offers something they can't: mature neighborhoods with proven schools, established
+                landscaping, and a genuine sense of community built over nearly two decades.
+                <strong> Berkshire Hathaway HomeServices</strong> helps families discover why
+                Centennial Hills remains one of the valley's most desirable addresses.
+              </p>
+              <p>
+                The community's appeal starts with location. Positioned at the base of the mountains
+                with easy access to US-95, Centennial Hills provides quick commutes throughout the
+                valley while maintaining a distinctly suburban atmosphere. The mountains are visible
+                from most streets, creating the feeling of living closer to nature than Centennial
+                Hills' urban conveniences would suggest.
+              </p>
+              <p>
+                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> has represented
+                Centennial Hills families since the community's earliest phases. Dr. Jan Duffy knows
+                which streets offer the best mountain views, which school zones are most sought-after,
+                and which HOAs maintain their communities to the highest standards. This deep local
+                knowledge, combined with the BHHS commitment to client service, ensures Centennial
+                Hills buyers and sellers receive exceptional representation.
+              </p>
+
+              {/* Community Highlights */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <div className="grid md:grid-cols-2 gap-8 not-prose">
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <Users className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Established Family Community</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    Centennial Hills has matured into a true community where neighbors know each other
+                    and families put down roots. The area features multiple established parks including
+                    the popular Centennial Hills Park, community events throughout the year, and the
+                    kind of neighborhood stability that creates lifelong friendships and strong property values.
                   </p>
-                  <p>
-                    The community features the Centennial Hills Park and numerous neighborhood
-                    parks, along with easy access to shopping at the Centennial Center. Multiple
-                    housing options range from starter homes to larger family properties.
-                  </p>
-                  <p>
-                    <strong>Berkshire Hathaway HomeServices</strong> agents know Centennial Hills
-                    intimately and can help you find the perfect home for your family.
+                </div>
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <ShoppingBag className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Centennial Center Convenience</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    Centennial Center provides residents with comprehensive shopping, dining, and
+                    entertainment options without leaving the neighborhood. Major retailers like Target,
+                    Costco, and Home Depot anchor the center, while diverse restaurants and services
+                    meet daily needs. Downtown Summerlin is also just minutes away.
                   </p>
                 </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="font-bold text-slate-900 text-lg mb-4">Community Features</h3>
-                {[
-                  { icon: Mountain, text: "Mountain proximity & views" },
-                  { icon: Users, text: "Family-friendly neighborhoods" },
-                  { icon: ShoppingBag, text: "Centennial Center shopping" },
-                  { icon: Home, text: "Diverse housing options" },
-                ].map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.text} className="flex items-center bg-slate-50 p-4 rounded-lg">
-                      <Icon className="h-6 w-6 text-blue-600 mr-4" />
-                      <span className="text-slate-700">{item.text}</span>
-                    </div>
-                  );
-                })}
+
+              <p className="mt-8">
+                The current market shows <strong>203 active listings</strong> with homes averaging
+                <strong> 25 days on market</strong>. The median price of <strong>$495,000</strong>
+                represents solid 4.8% year-over-year appreciation while remaining more accessible
+                than Summerlin's higher-priced neighborhoods. Properties range from $380,000 for
+                smaller homes to over $900,000 for larger properties with premium lots and views.
+              </p>
+              <p>
+                Working with <strong>Berkshire Hathaway HomeServices</strong> in Centennial Hills means
+                partnering with agents who understand the community's evolution and can identify
+                properties that represent genuine value. Dr. Jan Duffy helps buyers look beyond
+                surface features to evaluate factors that matter long-term: construction quality,
+                lot positioning, HOA health, and school quality. That expertise translates into
+                better purchase decisions and stronger long-term investments.
+              </p>
+            </div>
+          </section>
+
+          {/* Expert Quote */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
+              <blockquote className="text-lg text-slate-700 italic mb-4">
+                "Centennial Hills offers something newer communities are still building: a genuine
+                sense of community. The schools have track records, the neighbors have history, and
+                the landscaping is mature. As a Berkshire Hathaway HomeServices agent, I help families
+                see beyond the shiny new construction to communities that have proven their value
+                over time."
+              </blockquote>
+              <cite className="text-slate-900 font-semibold">
+                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
+              </cite>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Frequently Asked Questions About Centennial Hills
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What is the current median home price in Centennial Hills?
+                </h3>
+                <p className="text-slate-600">
+                  As of January 2026, Centennial Hills' median home price is $495,000, up 4.8%
+                  year-over-year. Prices range from $380,000 for smaller homes to over $900,000
+                  for larger properties with mountain views.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Is Centennial Hills a good family neighborhood?
+                </h3>
+                <p className="text-slate-600">
+                  Yes, Centennial Hills is one of Las Vegas's best family neighborhoods with
+                  highly-rated schools, safe streets, multiple parks including Centennial Hills
+                  Park, and convenient shopping at Centennial Center.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  How far is Centennial Hills from the Las Vegas Strip?
+                </h3>
+                <p className="text-slate-600">
+                  Centennial Hills is approximately 20-25 minutes from the Strip via US-95.
+                  The community offers easy freeway access while maintaining a suburban,
+                  family-oriented atmosphere away from tourist areas.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What shopping and amenities are near Centennial Hills?
+                </h3>
+                <p className="text-slate-600">
+                  Centennial Center provides extensive shopping, dining, and entertainment
+                  including Target, Costco, and numerous restaurants. Downtown Summerlin is
+                  also easily accessible for additional retail and entertainment options.
+                </p>
               </div>
             </div>
           </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Find Your Centennial Hills Home</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Find Your Centennial Hills Home
+            </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Looking for family-friendly living in northwest Las Vegas? Call Dr. Jan Duffy today.
+              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Centennial Hills expert,
+              for guidance in this established family community.
             </p>
             <a
               href="tel:+17022221964"

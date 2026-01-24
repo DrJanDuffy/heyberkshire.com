@@ -2,25 +2,68 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { Phone, MapPin, Home, GraduationCap, TreePine, ShoppingBag } from "lucide-react";
+import { Phone, TreePine, ShoppingBag, GraduationCap, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Green Valley Henderson Real Estate | Berkshire Hathaway HomeServices",
+  title: "Berkshire Hathaway HomeServices Green Valley | Henderson Real Estate",
   description:
-    "Find homes in Green Valley, Henderson with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Established community, golf courses, excellent schools. Call 702-222-1964.",
+    "Find Green Valley homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's most established community. Median price $520K. Call 702-222-1964.",
   keywords: [
+    "Berkshire Hathaway HomeServices Green Valley",
     "Green Valley homes for sale",
     "Green Valley Henderson",
     "Green Valley real estate",
-    "Henderson Nevada homes",
     "Green Valley Ranch",
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the current median home price in Green Valley?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "As of January 2026, Green Valley's median home price is $520,000, with 4.8% appreciation year-over-year. Prices range from $400,000 for smaller homes to over $1.2 million for luxury properties.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long do homes stay on the market in Green Valley?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Green Valley homes average 26 days on market. Properties near The District at Green Valley Ranch and those with upgraded features often sell faster, sometimes within the first two weeks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes Green Valley different from newer Henderson communities?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Green Valley, established in 1988, offers what newer communities can't: mature trees, established schools with proven track records, larger lots, and a genuine sense of community built over 35+ years.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Green Valley a good investment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Green Valley has shown consistent appreciation due to its prime Henderson location, established infrastructure, and ongoing demand from families seeking top schools and safety. BHHS agents can provide detailed market analysis.",
+      },
+    },
   ],
 };
 
 export default function GreenValleyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -41,18 +84,18 @@ export default function GreenValleyPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Green Valley Real Estate
+              Berkshire Hathaway HomeServices Green Valley
             </h1>
             <p className="text-xl text-slate-600">
-              Henderson's most established community. Find your Green Valley home with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong>.
+              Henderson's original master-planned community. Find your Green Valley home with{" "}
+              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
             </p>
           </div>
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Green Valley Market Stats | January 2026
+              Green Valley Real Estate Market | January 2026
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -60,85 +103,168 @@ export default function GreenValleyPage() {
                 <div className="text-slate-300 text-sm">Median Home Price</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">+4.8%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">26 Days</div>
+                <div className="text-3xl font-bold text-green-400 mb-1">26 Days</div>
                 <div className="text-slate-300 text-sm">Avg. Days on Market</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">1988</div>
-                <div className="text-slate-300 text-sm">Year Established</div>
+                <div className="text-3xl font-bold mb-1">187</div>
+                <div className="text-slate-300 text-sm">Active Listings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-1">+4.8%</div>
+                <div className="text-slate-300 text-sm">YoY Appreciation</div>
               </div>
             </div>
           </section>
 
-          {/* About */}
+          {/* Main Content */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">About Green Valley</h2>
-                <div className="prose prose-lg text-slate-700">
-                  <p>
-                    <strong>Green Valley</strong> is Henderson's original master-planned community
-                    and one of the most desirable neighborhoods in Southern Nevada. Established in
-                    1988, Green Valley offers mature landscaping, established schools, and a strong
-                    sense of community that newer developments simply can't replicate.
+            <div className="prose prose-lg max-w-none text-slate-700">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Green Valley: Where Henderson Families Have Thrived for 35+ Years
+              </h2>
+              <p>
+                <strong>Green Valley</strong> holds a special place in Henderson's history as the city's
+                original master-planned community. Established in 1988, Green Valley pioneered the concept
+                of thoughtfully designed neighborhoods in Southern Nevada—long before master-planned
+                communities became the norm. Today, <strong>Berkshire Hathaway HomeServices</strong>
+                continues to serve Green Valley families, helping new generations discover what long-time
+                residents already know: this is one of the best places to live in Nevada.
+              </p>
+              <p>
+                What makes Green Valley unique is something that can't be replicated: time. Over three
+                decades, the community has matured into a verdant oasis with towering trees, established
+                landscaping, and a genuine neighborhood feel. While newer communities offer shiny amenities,
+                Green Valley offers something more valuable—proven schools with track records of excellence,
+                neighbors who've built lifelong friendships, and the kind of community cohesion that only
+                develops over generations.
+              </p>
+              <p>
+                <strong>Berkshire Hathaway HomeServices Nevada Properties</strong> agents have been selling
+                homes in Green Valley since the beginning. Dr. Jan Duffy knows which streets offer the best
+                mountain views, which school zones are most sought-after, and which HOAs maintain their
+                communities to the highest standards. This institutional knowledge, combined with the
+                resources and reputation of BHHS, gives Green Valley buyers and sellers a distinct advantage.
+              </p>
+
+              {/* Community Highlights */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
+              <div className="grid md:grid-cols-2 gap-8 not-prose">
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <TreePine className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">Mature Landscaping & Character</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    Green Valley's 35+ years of growth have created tree-lined streets and lush landscaping
+                    that newer communities simply can't match. The established vegetation provides shade,
+                    privacy, and a sense of permanence. Many homes feature larger lots than you'll find in
+                    newer developments, with mature fruit trees and professional landscaping.
                   </p>
-                  <p>
-                    The community is anchored by The District at Green Valley Ranch—a premier
-                    shopping, dining, and entertainment destination. Multiple golf courses,
-                    including Legacy Golf Club, provide recreation for golf enthusiasts.
-                  </p>
-                  <p>
-                    <strong>Berkshire Hathaway HomeServices</strong> agents have deep expertise in
-                    Green Valley's diverse housing options, from condos and townhomes to luxury
-                    custom estates.
+                </div>
+                <div className="bg-slate-50 p-6 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <ShoppingBag className="h-8 w-8 text-blue-600 mr-3" />
+                    <h4 className="font-bold text-slate-900 text-lg">The District at Green Valley Ranch</h4>
+                  </div>
+                  <p className="text-slate-600">
+                    The District is Henderson's premier outdoor shopping and entertainment destination.
+                    This pedestrian-friendly center features upscale retailers, diverse dining options,
+                    a luxury movie theater, and regular community events. Green Valley residents enjoy
+                    easy access to this lifestyle amenity that draws visitors from across the valley.
                   </p>
                 </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="font-bold text-slate-900 text-lg mb-4">Green Valley Highlights</h3>
-                {[
-                  { icon: TreePine, text: "Mature landscaping & tree-lined streets" },
-                  { icon: GraduationCap, text: "Top-rated Henderson schools" },
-                  { icon: ShoppingBag, text: "The District at Green Valley Ranch" },
-                  { icon: MapPin, text: "Central Henderson location" },
-                  { icon: Home, text: "Homes from $400K to $1.2M+" },
-                ].map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.text} className="flex items-center bg-slate-50 p-4 rounded-lg">
-                      <Icon className="h-6 w-6 text-blue-600 mr-4" />
-                      <span className="text-slate-700">{item.text}</span>
-                    </div>
-                  );
-                })}
-              </div>
+
+              <p className="mt-8">
+                The current Green Valley market shows <strong>187 active listings</strong> with homes
+                averaging <strong>26 days on market</strong>. The median price of <strong>$520,000</strong>
+                reflects the community's desirability and the premium buyers pay for established
+                neighborhoods. Properties range from well-maintained townhomes in the $400,000s to
+                custom homes exceeding $1.2 million in Green Valley's more exclusive enclaves.
+              </p>
+              <p>
+                Working with a <strong>Berkshire Hathaway HomeServices</strong> agent in Green Valley
+                means understanding the subtle differences between Green Valley proper, Green Valley Ranch,
+                and Green Valley South. Each area has distinct characteristics, price points, and lifestyle
+                offerings. Dr. Jan Duffy helps buyers navigate these nuances and find the perfect fit—whether
+                that's a starter home for a young family or a forever home for empty nesters looking to
+                downsize without leaving the community they love.
+              </p>
             </div>
           </section>
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-slate-50 rounded-lg p-8">
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Green Valley offers something newer communities can't—established neighborhoods
-                with mature trees, proven schools, and a real sense of community. It's where
-                Henderson families have put down roots for over 35 years."
+                "Green Valley offers something newer communities can't replicate—35 years of established
+                neighborhoods, proven schools, and a real sense of community. When clients tell me they
+                want tree-lined streets and neighbors who know each other's names, I show them Green Valley.
+                It's the original, and still one of the best."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties
+                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Frequently Asked Questions About Green Valley Real Estate
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What is the current median home price in Green Valley?
+                </h3>
+                <p className="text-slate-600">
+                  As of January 2026, Green Valley's median home price is $520,000, with 4.8% appreciation
+                  year-over-year. Prices range from $400,000 for smaller homes to over $1.2 million for
+                  luxury properties.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  How long do homes stay on the market in Green Valley?
+                </h3>
+                <p className="text-slate-600">
+                  Green Valley homes average 26 days on market. Properties near The District at Green Valley
+                  Ranch and those with upgraded features often sell faster, sometimes within the first two weeks.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  What makes Green Valley different from newer Henderson communities?
+                </h3>
+                <p className="text-slate-600">
+                  Green Valley, established in 1988, offers what newer communities can't: mature trees,
+                  established schools with proven track records, larger lots, and a genuine sense of
+                  community built over 35+ years.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Is Green Valley a good investment?
+                </h3>
+                <p className="text-slate-600">
+                  Green Valley has shown consistent appreciation due to its prime Henderson location,
+                  established infrastructure, and ongoing demand from families seeking top schools and
+                  safety. BHHS agents can provide detailed market analysis.
+                </p>
+              </div>
             </div>
           </section>
 
           {/* CTA */}
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Find Your Green Valley Home</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Discover Green Valley Living
+            </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Ready to explore Green Valley? Call Dr. Jan Duffy, your Berkshire Hathaway
-              HomeServices Henderson expert.
+              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Green Valley specialist,
+              for expert guidance in Henderson's most established community.
             </p>
             <a
               href="tel:+17022221964"
