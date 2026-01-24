@@ -8,7 +8,7 @@ import CTASection from "@/components/sections/CTASection";
 import Footer from "@/components/layouts/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Home, TrendingUp, Shield, Users, Phone } from "lucide-react";
+import { Home as HomeIcon, TrendingUp, Shield, Users, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Las Vegas | Dr. Jan Duffy, REALTOR®",
@@ -151,7 +151,7 @@ export default function Home() {
               </div>
               <div className="text-center p-6">
                 <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Home className="h-8 w-8 text-blue-600" />
+                  <HomeIcon className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Full Service</h3>
                 <p className="text-slate-600 text-sm">
