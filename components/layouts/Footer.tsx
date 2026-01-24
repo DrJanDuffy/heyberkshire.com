@@ -12,7 +12,8 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-xl mb-4">Berkshire Hathaway HomeServices</h3>
             <p className="text-slate-300 mb-4 text-sm">
-              Nevada Properties - Your trusted real estate partner in Las Vegas and Henderson.
+              Nevada Properties - Your trusted real estate partner in Las Vegas, Henderson, and
+              Summerlin. Backed by Warren Buffett's legacy of trust.
             </p>
             <div className="flex space-x-4">
               <Link
@@ -44,27 +45,50 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/listings" className="text-slate-300 hover:text-white transition-colors text-sm">
+                <Link
+                  href="/listings"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
                   All Properties
                 </Link>
               </li>
               <li>
-                <Link href="/neighborhoods" className="text-slate-300 hover:text-white transition-colors text-sm">
+                <Link
+                  href="/neighborhoods"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
                   Neighborhoods
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-slate-300 hover:text-white transition-colors text-sm">
-                  About Us
+                <Link
+                  href="/why-berkshire-hathaway"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  Why BHHS
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-300 hover:text-white transition-colors text-sm">
-                  Services
+                <Link
+                  href="/market-report"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  Market Report
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-300 hover:text-white transition-colors text-sm">
+                <Link
+                  href="/about"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  About Dr. Jan
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
                   Contact
                 </Link>
               </li>
@@ -73,43 +97,87 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Our Services</h3>
+            <h3 className="font-bold text-lg mb-4">Real Estate Services</h3>
             <ul className="space-y-2">
-              <li className="text-slate-300 text-sm">Home Buying</li>
-              <li className="text-slate-300 text-sm">Home Selling</li>
-              <li className="text-slate-300 text-sm">Property Valuation</li>
-              <li className="text-slate-300 text-sm">Investment Properties</li>
-              <li className="text-slate-300 text-sm">Relocation Services</li>
+              <li>
+                <Link
+                  href="/buyers"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  Home Buying
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/sellers"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  Home Selling
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/luxury-homes"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  Luxury Homes
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/new-construction"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  New Construction
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/investment-properties"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  Investment Properties
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/relocation"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  Relocation
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Contact Info - NAP (Name, Address, Phone) */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Contact Us</h3>
+            <h3 className="font-bold text-lg mb-4">Contact Dr. Jan Duffy</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0 mt-0.5" />
                 <span className="text-slate-300 text-sm">
-                  123 Main Street<br />
-                  Las Vegas, NV 89101
+                  9406 W Lake Mead Blvd, Suite 100
+                  <br />
+                  Las Vegas, NV 89134
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
                 <Link
-                  href="tel:+17025551234"
+                  href="tel:+17022221964"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
-                  (702) 555-1234
+                  (702) 222-1964
                 </Link>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-blue-400 flex-shrink-0" />
                 <Link
-                  href="mailto:info@heyberkshire.com"
+                  href="mailto:jan@heyberkshire.com"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
-                  info@heyberkshire.com
+                  jan@heyberkshire.com
                 </Link>
               </li>
             </ul>
@@ -117,12 +185,28 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-slate-800 mt-8 pt-8 text-center">
-          <p className="text-slate-400 text-sm">
-            © {currentYear} Berkshire Hathaway HomeServices Nevada Properties. All Rights Reserved.
+        <div className="border-t border-slate-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-slate-400 text-sm text-center md:text-left">
+              © {currentYear} Berkshire Hathaway HomeServices Nevada Properties. All Rights
+              Reserved.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <Link href="/faq" className="text-slate-400 hover:text-white transition-colors">
+                FAQ
+              </Link>
+              <Link href="/sitemap.xml" className="text-slate-400 hover:text-white transition-colors">
+                Sitemap
+              </Link>
+            </div>
+          </div>
+          <p className="text-slate-500 text-xs mt-4 text-center">
+            Dr. Jan Duffy, REALTOR® | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada
+            Properties
           </p>
-          <p className="text-slate-500 text-xs mt-2">
-            License S.0197614.LLC | Dr. Jan Duffy, Realtor
+          <p className="text-slate-600 text-xs mt-2 text-center max-w-3xl mx-auto">
+            When you work with a Berkshire Hathaway HomeServices agent, you're backed by a name
+            synonymous with trust, ethical standards, and financial strength.
           </p>
         </div>
       </div>

@@ -7,29 +7,37 @@ import { GeistSans } from "geist/font/sans";
 import { cn } from "lib/utils";
 import AIChatWidget from "@/components/chat/AIChatWidget";
 
-const title = "Las Vegas & Henderson Real Estate | Berkshire Hathaway HomeServices";
+const title = "Berkshire Hathaway HomeServices Las Vegas | Dr. Jan Duffy, REALTOR®";
 const description =
-  "Expert real estate services in Las Vegas and Henderson, NV. Buy, sell, or invest with Dr. Jan Duffy. Licensed Realtor with Berkshire Hathaway HomeServices Nevada Properties.";
+  "Looking for a Berkshire Hathaway HomeServices agent in Las Vegas? Dr. Jan Duffy with BHHS Nevada Properties offers expert real estate services—backed by Warren Buffett's legacy of trust.";
 const url = "https://heyberkshire.com";
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    default: title,
+    template: "%s | Berkshire Hathaway HomeServices Nevada Properties",
+  },
   description,
   metadataBase: new URL(url),
   keywords: [
+    "Berkshire Hathaway HomeServices",
+    "Berkshire Hathaway HomeServices Nevada Properties",
+    "Berkshire Hathaway HomeServices Las Vegas",
+    "BHHS real estate agent",
+    "Berkshire Hathaway realtor Las Vegas",
+    "Dr. Jan Duffy",
     "Las Vegas real estate",
     "Henderson real estate",
-    "Nevada properties",
-    "home for sale Las Vegas",
-    "real estate agent Henderson",
-    "Berkshire Hathaway HomeServices",
-    "Dr. Jan Duffy",
+    "Las Vegas homes for sale",
+    "Henderson homes for sale",
+    "Summerlin real estate",
+    "luxury homes Las Vegas",
   ],
   openGraph: {
     title,
     description,
     url,
-    siteName: "Berkshire Hathaway HomeServices Nevada Properties",
+    siteName: "HeyBerkshire - Berkshire Hathaway HomeServices Nevada Properties",
     type: "website",
     locale: "en_US",
   },
@@ -45,6 +53,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: url,
+  },
 };
 
 // LocalBusiness Schema for GBP optimization
@@ -52,35 +63,58 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   "@id": `${url}#organization`,
-  name: "Berkshire Hathaway HomeServices Nevada Properties",
-  alternateName: "Berkshire Hathaway HomeServices",
+  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+  alternateName: ["HeyBerkshire", "BHHS Nevada Properties", "Berkshire Hathaway HomeServices"],
   url,
   logo: `${url}/favicon-32x32.png`,
   image: `${url}/favicon-32x32.png`,
-  description,
+  description:
+    "Dr. Jan Duffy is a licensed REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, Summerlin, and surrounding areas with 15+ years of experience and $127M+ in closed transactions.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "123 Main Street",
+    streetAddress: "9406 W Lake Mead Blvd, Suite 100",
     addressLocality: "Las Vegas",
     addressRegion: "NV",
-    postalCode: "89101",
+    postalCode: "89134",
     addressCountry: "US",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "36.1699",
-    longitude: "-115.1398",
+    latitude: "36.1893",
+    longitude: "-115.2821",
   },
-  telephone: "+17025551234",
-  email: "info@heyberkshire.com",
-  priceRange: "$$",
-  areaServed: {
-    "@type": "City",
-    name: ["Las Vegas", "Henderson"],
-  },
+  telephone: "+17022221964",
+  email: "jan@heyberkshire.com",
+  priceRange: "$$-$$$$",
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Las Vegas",
+      sameAs: "https://en.wikipedia.org/wiki/Las_Vegas",
+    },
+    {
+      "@type": "City",
+      name: "Henderson",
+      sameAs: "https://en.wikipedia.org/wiki/Henderson,_Nevada",
+    },
+    {
+      "@type": "Place",
+      name: "Summerlin",
+    },
+    {
+      "@type": "Place",
+      name: "North Las Vegas",
+    },
+  ],
   memberOf: {
     "@type": "Organization",
     name: "Berkshire Hathaway HomeServices",
+    url: "https://www.bhhs.com",
+  },
+  parentOrganization: {
+    "@type": "RealEstateAgent",
+    name: "Berkshire Hathaway HomeServices Nevada Properties",
+    url: "https://www.bfrre.com",
   },
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
@@ -89,11 +123,42 @@ const localBusinessSchema = {
       "@type": "Organization",
       name: "Nevada Real Estate Division",
     },
+    validIn: {
+      "@type": "State",
+      name: "Nevada",
+    },
     credentialNumber: "S.0197614.LLC",
   },
-  sameAs: [
-    // Add social media profiles when available
+  knowsAbout: [
+    "Las Vegas real estate",
+    "Henderson homes",
+    "Summerlin properties",
+    "Luxury homes",
+    "New construction",
+    "Investment properties",
+    "Relocation services",
   ],
+  slogan: "Your Berkshire Hathaway HomeServices expert in Las Vegas",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday", "Sunday"],
+      opens: "10:00",
+      closes: "16:00",
+    },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "200",
+    bestRating: "5",
+  },
 };
 
 export default function RootLayout({
