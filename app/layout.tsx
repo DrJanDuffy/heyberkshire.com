@@ -2,6 +2,7 @@ import "./globals.css";
 
 import React from "react";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { GeistSans } from "geist/font/sans";
 import { cn } from "lib/utils";
 import AIChatWidget from "@/components/chat/AIChatWidget";
@@ -106,6 +107,22 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        {/* RealScout Widget Script - loaded once globally */}
+        <Script
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+          type="module"
+          strategy="afterInteractive"
+        />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              realscout-office-listings {
+                --rs-listing-divider-color: #0e64c8;
+                width: 100%;
+              }
+            `,
+          }}
         />
       </head>
       <body

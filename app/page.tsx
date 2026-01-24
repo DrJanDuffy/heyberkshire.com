@@ -1,6 +1,6 @@
 import Navbar from "@/components/layouts/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
-import FeaturedProperties from "@/components/sections/FeaturedProperties";
+import RealScoutListings from "@/components/realscout/RealScoutListings";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
@@ -80,7 +80,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <FeaturedProperties />
+        <RealScoutListings />
         <WhyChooseUs />
         <ReviewsSection />
         <FAQSection />

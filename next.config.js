@@ -11,6 +11,29 @@ const nextConfig = {
       },
     ]
   },
+  // Security headers including CSP for RealScout widget
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com",
+              "style-src 'self' 'unsafe-inline' https://em.realscout.com https://www.realscout.com",
+              "img-src 'self' data: blob: https: http:",
+              "font-src 'self' data:",
+              "connect-src 'self' https://em.realscout.com https://www.realscout.com https://openrouter.ai https://api.openai.com",
+              "frame-src 'self' https://em.realscout.com https://www.realscout.com",
+              "worker-src 'self' blob:",
+            ].join('; '),
+          },
+        ],
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
