@@ -2,20 +2,7 @@
 
 import { useEffect } from "react";
 import Script from "next/script";
-
-declare global {
-  interface Window {
-    Calendly?: {
-      initBadgeWidget: (options: {
-        url: string;
-        text: string;
-        color: string;
-        textColor: string;
-        branding?: boolean;
-      }) => void;
-    };
-  }
-}
+import "./types";
 
 interface CalendlyBadgeProps {
   url?: string;
