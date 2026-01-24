@@ -285,7 +285,6 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </div>
 
           {/* Calendly Section */}
           <div className="max-w-4xl mx-auto mt-16">
