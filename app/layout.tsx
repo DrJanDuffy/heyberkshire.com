@@ -6,6 +6,7 @@ import Script from "next/script";
 import { GeistSans } from "geist/font/sans";
 import { cn } from "lib/utils";
 import AIChatWidget from "@/components/chat/AIChatWidget";
+import CalendlyBadge from "@/components/calendly/CalendlyBadge";
 
 const title = "Berkshire Hathaway HomeServices Las Vegas | Dr. Jan Duffy, REALTOR®";
 const description =
@@ -198,6 +199,7 @@ export default function RootLayout({
       >
         {children}
         <AIChatWidget />
+        <CalendlyBadge />
       </body>
     </html>
   );
