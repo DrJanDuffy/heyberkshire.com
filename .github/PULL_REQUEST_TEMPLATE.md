@@ -28,6 +28,7 @@
 - [ ] Tested on mobile viewport
 - [ ] Tested on desktop viewport
 - [ ] No console errors in browser
+- [ ] Devin Review feedback addressed (auto-runs on PR)
 
 ## Screenshots
 <!-- Add before/after screenshots if UI changes -->
