@@ -309,64 +309,82 @@ export default function FiftyFiveCommunitiesPage() {
               Top 55+ Communities in Las Vegas
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {communities.map((community) => (
-                <div
-                  key={community.name}
-                  className="bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
-                >
-                  <div className="bg-slate-900 text-white p-6">
-                    <h3 className="text-xl font-bold mb-1">{community.name}</h3>
-                    <div className="flex items-center text-slate-300 text-sm">
-                      <MapPin className="h-4 w-4 mr-1" />
-                      {community.location}
+              {communities.map((community) => {
+                const slugMap: Record<string, string> = {
+                  "Sun City Summerlin": "sun-city-summerlin",
+                  "Sun City Anthem": "sun-city-anthem",
+                  "Del Webb at Lake Las Vegas": "del-webb-lake-las-vegas",
+                };
+                const slug = slugMap[community.name];
+                
+                return (
+                  <div
+                    key={community.name}
+                    className="bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
+                  >
+                    <div className="bg-slate-900 text-white p-6">
+                      <h3 className="text-xl font-bold mb-1">{community.name}</h3>
+                      <div className="flex items-center text-slate-300 text-sm">
+                        <MapPin className="h-4 w-4 mr-1" />
+                        {community.location}
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <p className="text-slate-600 mb-4">{community.description}</p>
+
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                          <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                            Price Range
+                          </div>
+                          <div className="font-bold text-slate-900">{community.priceRange}</div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                            HOA Fees
+                          </div>
+                          <div className="font-bold text-slate-900">{community.hoaFees}</div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                            Age Requirement
+                          </div>
+                          <div className="font-bold text-slate-900">{community.ageRequirement}</div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                            Community Size
+                          </div>
+                          <div className="font-bold text-slate-900">{community.homes}</div>
+                        </div>
+                      </div>
+
+                      <div className="border-t border-slate-100 pt-4">
+                        <div className="text-xs text-slate-500 uppercase tracking-wide mb-2">
+                          Highlights
+                        </div>
+                        <ul className="space-y-1">
+                          {community.highlights.map((highlight) => (
+                            <li key={highlight} className="flex items-start text-sm text-slate-600">
+                              <span className="text-green-500 mr-2">✓</span>
+                              {highlight}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      {slug && (
+                        <Link
+                          href={`/55-plus-communities/${slug}`}
+                          className="block mt-4 text-center bg-blue-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-blue-700 transition-colors"
+                        >
+                          View {community.name} Details →
+                        </Link>
+                      )}
                     </div>
                   </div>
-                  <div className="p-6">
-                    <p className="text-slate-600 mb-4">{community.description}</p>
-
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
-                          Price Range
-                        </div>
-                        <div className="font-bold text-slate-900">{community.priceRange}</div>
-                      </div>
-                      <div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
-                          HOA Fees
-                        </div>
-                        <div className="font-bold text-slate-900">{community.hoaFees}</div>
-                      </div>
-                      <div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
-                          Age Requirement
-                        </div>
-                        <div className="font-bold text-slate-900">{community.ageRequirement}</div>
-                      </div>
-                      <div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
-                          Community Size
-                        </div>
-                        <div className="font-bold text-slate-900">{community.homes}</div>
-                      </div>
-                    </div>
-
-                    <div className="border-t border-slate-100 pt-4">
-                      <div className="text-xs text-slate-500 uppercase tracking-wide mb-2">
-                        Highlights
-                      </div>
-                      <ul className="space-y-1">
-                        {community.highlights.map((highlight) => (
-                          <li key={highlight} className="flex items-start text-sm text-slate-600">
-                            <span className="text-green-500 mr-2">✓</span>
-                            {highlight}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
 

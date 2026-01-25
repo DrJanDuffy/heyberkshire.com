@@ -109,6 +109,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/buyers/california-relocator"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  California Relocators
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/sellers"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
@@ -125,6 +133,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/55-plus-communities"
+                  className="text-slate-300 hover:text-white transition-colors text-sm"
+                >
+                  55+ Communities
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/new-construction"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
@@ -133,18 +149,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/investment-properties"
+                  href="/market-insights"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
-                  Investment Properties
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/relocation"
-                  className="text-slate-300 hover:text-white transition-colors text-sm"
-                >
-                  Relocation
+                  Market Insights
                 </Link>
               </li>
             </ul>

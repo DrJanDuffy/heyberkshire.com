@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/why-berkshire-hathaway`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/market-report`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/market-update`, priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${baseUrl}/market-insights`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/faq`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
@@ -27,6 +28,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/home-valuation`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/55-plus-communities`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/services`, priority: 0.7, changeFrequency: "monthly" as const },
+  ];
+
+  // Buyer persona pages
+  const buyerPersonaPages = [
+    { url: `${baseUrl}/buyers/california-relocator`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/buyers/first-time-buyers`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/buyers/luxury-homes-las-vegas`, priority: 0.8, changeFrequency: "monthly" as const },
+  ];
+
+  // Seller persona pages
+  const sellerPersonaPages = [
+    { url: `${baseUrl}/sellers/move-up`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/sellers/downsizing`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/sellers/divorce-probate`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/sellers/relocation`, priority: 0.8, changeFrequency: "monthly" as const },
+  ];
+
+  // 55+ community sub-pages
+  const fiftyPlusCommunityPages = [
+    { url: `${baseUrl}/55-plus-communities/sun-city-summerlin`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/sun-city-anthem`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/del-webb-lake-las-vegas`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
   // Neighborhood pages
@@ -44,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/neighborhoods/mountains-edge`, priority: 0.7, changeFrequency: "weekly" as const },
   ];
 
-  const allPages = [...corePages, ...servicePages, ...neighborhoodPages];
+  const allPages = [...corePages, ...servicePages, ...buyerPersonaPages, ...sellerPersonaPages, ...fiftyPlusCommunityPages, ...neighborhoodPages];
 
   return allPages.map((page) => ({
     url: page.url,
