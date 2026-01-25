@@ -127,13 +127,39 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Google Map Placeholder */}
-              <div className="bg-slate-100 rounded-lg h-64 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-8 w-8 text-slate-400 mx-auto mb-2" />
-                  <p className="text-slate-500">Google Map</p>
-                  <p className="text-xs text-slate-400">9406 W Lake Mead Blvd, Las Vegas</p>
-                </div>
+              {/* Google Map Embed */}
+              <div className="rounded-lg overflow-hidden h-64">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3219.8!2d-115.2678!3d36.1941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9406+W+Lake+Mead+Blvd%2C+Las+Vegas%2C+NV+89134!5e0!3m2!1sen!2sus!4v1706000000000"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Berkshire Hathaway HomeServices Nevada Properties Office Location"
+                ></iframe>
+              </div>
+              
+              {/* Directions Button */}
+              <div className="mt-4 flex gap-3">
+                <a
+                  href="https://www.google.com/maps/dir//9406+W+Lake+Mead+Blvd,+Suite+100,+Las+Vegas,+NV+89134"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                >
+                  <MapPin className="h-4 w-4 mr-2" />
+                  Get Directions
+                </a>
+                <a
+                  href="https://g.page/YOUR_GBP_LINK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium transition-colors"
+                >
+                  View on Google
+                </a>
               </div>
 
               {/* Credentials */}

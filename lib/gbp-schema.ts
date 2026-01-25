@@ -82,15 +82,66 @@ export const businessInfo = {
     { name: "Luxury Condo Sales", description: "High-rise and resort-style condominiums" },
   ],
 
-  // Attributes for GBP
-  attributes: [
-    "Wheelchair accessible entrance",
-    "Wheelchair accessible parking lot",
-    "LGBTQ+ friendly",
-    "Appointment required",
-    "Online appointments",
-    "Free consultation",
+  // Attributes for GBP - Fill out ALL available
+  attributes: {
+    // Accessibility (important for GBP)
+    accessibility: [
+      "Wheelchair accessible entrance",
+      "Wheelchair accessible parking lot",
+      "Wheelchair accessible restroom",
+    ],
+    // Service options
+    serviceOptions: [
+      "Online appointments",
+      "Onsite services",
+      "Same-day appointments",
+    ],
+    // Highlights
+    highlights: [
+      "Identifies as women-owned",
+      "LGBTQ+ friendly",
+      "Veteran-led",
+    ],
+    // Offerings
+    offerings: [
+      "Free consultation",
+      "Free estimates",
+    ],
+    // Amenities
+    amenities: [
+      "Free Wi-Fi",
+      "Free parking",
+    ],
+    // Planning
+    planning: [
+      "Appointment required",
+      "Accepts new clients",
+    ],
+    // Payments (if applicable)
+    payments: [
+      "Credit cards",
+      "Checks",
+      "Wire transfer",
+    ],
+  },
+
+  // Social profiles for sameAs schema
+  socialProfiles: [
+    "https://www.facebook.com/drjanduffy",
+    "https://www.instagram.com/drjanduffy",
+    "https://www.linkedin.com/in/drjanduffy",
+    "https://www.youtube.com/@drjanduffy",
+    "https://twitter.com/drjanduffy",
   ],
+
+  // Languages spoken
+  languages: ["English", "Spanish"],
+
+  // Payment methods accepted
+  paymentAccepted: ["Credit Card", "Check", "Wire Transfer"],
+
+  // Year established
+  foundingDate: "2010",
 };
 
 // 750-word GBP Description (3 sections)
