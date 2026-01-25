@@ -123,6 +123,67 @@ export default function SellersPage() {
             </div>
           </section>
 
+          {/* Seller Types */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Specialized Services for Every Seller
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link
+                href="/sellers/move-up"
+                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+              >
+                <div className="text-3xl mb-4">🏡</div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
+                  Move-Up Sellers
+                </h3>
+                <p className="text-slate-600 text-sm mb-3">
+                  Leverage your equity into your dream home. Coordinated buy & sell.
+                </p>
+                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+              </Link>
+              <Link
+                href="/sellers/downsizing"
+                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+              >
+                <div className="text-3xl mb-4">🌴</div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
+                  Downsizing
+                </h3>
+                <p className="text-slate-600 text-sm mb-3">
+                  Extract equity, simplify life. 55+ communities and low-maintenance options.
+                </p>
+                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+              </Link>
+              <Link
+                href="/sellers/divorce-probate"
+                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+              >
+                <div className="text-3xl mb-4">⚖️</div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
+                  Divorce & Probate
+                </h3>
+                <p className="text-slate-600 text-sm mb-3">
+                  Sensitive situations handled with discretion and professionalism.
+                </p>
+                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+              </Link>
+              <Link
+                href="/sellers/relocation"
+                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+              >
+                <div className="text-3xl mb-4">✈️</div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
+                  Relocation
+                </h3>
+                <p className="text-slate-600 text-sm mb-3">
+                  Moving for work? BHHS nationwide network coordinates both ends.
+                </p>
+                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+              </Link>
+            </div>
+          </section>
+
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-50 rounded-lg p-8">
