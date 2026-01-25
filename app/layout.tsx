@@ -87,6 +87,11 @@ export default function RootLayout({
           type="module"
           strategy="beforeInteractive"
         />
+        {/* Calendly Widget Script - loaded once globally */}
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="beforeInteractive"
+        />
       </head>
       <body
         className={cn(
