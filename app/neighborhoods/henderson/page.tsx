@@ -191,6 +191,113 @@ export default function HendersonPage() {
                 </div>
               </div>
 
+              {/* School Districts */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Henderson School Districts</h3>
+              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Henderson offers some of Nevada's best public schools through Clark County School District,
+                  plus excellent charter and private options:
+                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• John C. Vanderburg (9/10)</li>
+                      <li>• Elise L. Wolff Elementary</li>
+                      <li>• C.T. Sewell Elementary</li>
+                      <li>• Pinecrest Academy (Charter)</li>
+                      <li>• Coral Academy (Charter)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Coronado High School (8/10)</li>
+                      <li>• Green Valley High School</li>
+                      <li>• Foothill High School</li>
+                      <li>• Bob Miller Middle School</li>
+                      <li>• Del E. Webb Middle School</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Private Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Henderson International School</li>
+                      <li>• Coral Academy of Science</li>
+                      <li>• Pinecrest Academy</li>
+                      <li>• The Adelson School</li>
+                      <li>• St. Peter the Apostle</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Commute Times */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Henderson</h3>
+              <div className="not-prose overflow-x-auto">
+                <table className="w-full bg-white border border-slate-200 rounded-lg">
+                  <thead className="bg-slate-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    <tr><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">8 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">20-35 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">6 miles</td><td className="px-4 py-3">12 min</td><td className="px-4 py-3">15-25 min</td></tr>
+                    <tr><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-40 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Summerlin</td><td className="px-4 py-3">22 miles</td><td className="px-4 py-3">28 min</td><td className="px-4 py-3">40-55 min</td></tr>
+                    <tr><td className="px-4 py-3">Lake Mead</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td><td className="px-4 py-3">20-25 min</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-slate-600 text-sm mt-2 not-prose">
+                Henderson's central location provides excellent access to the 215 Beltway and I-515/US-95,
+                making commutes to all parts of the valley convenient.
+              </p>
+
+              {/* Major Employers */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Major Henderson Employers</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <ul className="text-slate-600 space-y-2">
+                  <li><strong>Barclays:</strong> Credit card operations center (~3,000 employees)</li>
+                  <li><strong>Credit One Bank:</strong> Corporate headquarters</li>
+                  <li><strong>City of Henderson:</strong> Municipal services</li>
+                  <li><strong>Henderson Hospital:</strong> Healthcare services</li>
+                </ul>
+                <ul className="text-slate-600 space-y-2">
+                  <li><strong>Station Casinos:</strong> Green Valley Ranch, Sunset Station</li>
+                  <li><strong>Levi Strauss:</strong> Distribution center</li>
+                  <li><strong>Amazon:</strong> Fulfillment center nearby</li>
+                  <li><strong>St. Rose Dominican:</strong> Hospital system</li>
+                </ul>
+              </div>
+
+              {/* Local Amenities */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>The District at Green Valley Ranch:</strong> Outdoor shopping, restaurants, movie theater.</li>
+                    <li><strong>Galleria at Sunset:</strong> Major mall with Macy's, Dillard's, 140+ stores.</li>
+                    <li><strong>Green Valley Ranch Resort:</strong> Casino, spa, restaurants, concerts.</li>
+                    <li><strong>Henderson Farmers Market:</strong> Weekly local produce and artisan goods.</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Healthcare Facilities</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Henderson Hospital:</strong> Full-service hospital, 24/7 ER, labor & delivery.</li>
+                    <li><strong>St. Rose Dominican:</strong> Three locations in Henderson—Siena, San Martin, Rose de Lima.</li>
+                    <li><strong>Southwest Medical:</strong> Multiple clinics throughout Henderson.</li>
+                    <li><strong>Dignity Health:</strong> Urgent care and primary care facilities.</li>
+                  </ul>
+                </div>
+              </div>
+
               <p className="mt-8">
                 With <strong>1,280 active listings</strong> and homes averaging just <strong>24 days on market</strong>,
                 Henderson's real estate market moves quickly. The median price of <strong>$485,000</strong> offers

@@ -176,6 +176,114 @@ export default function CentennialHillsPage() {
                 </div>
               </div>
 
+              {/* Schools */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Centennial Hills School Districts</h3>
+              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Centennial Hills is served by established, well-regarded schools with proven track records:
+                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Ober Elementary (8/10)</li>
+                      <li>• Cashman Elementary</li>
+                      <li>• Scherkenbach Elementary</li>
+                      <li>• Hummel Elementary</li>
+                      <li>• McMillan Elementary</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Centennial High School (7/10)</li>
+                      <li>• Shadow Ridge High School</li>
+                      <li>• Arbor View High School</li>
+                      <li>• Becker Middle School</li>
+                      <li>• Escobedo Middle School</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Charter/Private</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Pinecrest Academy</li>
+                      <li>• Somerset Academy</li>
+                      <li>• Coral Academy of Science</li>
+                      <li>• Faith Lutheran (nearby)</li>
+                      <li>• The Meadows School (nearby)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Commute Times */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Centennial Hills</h3>
+              <div className="not-prose overflow-x-auto">
+                <table className="w-full bg-white border border-slate-200 rounded-lg">
+                  <thead className="bg-slate-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    <tr><td className="px-4 py-3">Downtown Summerlin</td><td className="px-4 py-3">6 miles</td><td className="px-4 py-3">12 min</td><td className="px-4 py-3">18-25 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">22 min</td><td className="px-4 py-3">30-45 min</td></tr>
+                    <tr><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td><td className="px-4 py-3">35-50 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-40 min</td></tr>
+                    <tr><td className="px-4 py-3">Henderson</td><td className="px-4 py-3">25 miles</td><td className="px-4 py-3">30 min</td><td className="px-4 py-3">45-60 min</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-slate-600 text-sm mt-2 not-prose">
+                Centennial Hills' proximity to US-95 provides excellent north-south access throughout the valley.
+              </p>
+
+              {/* Shopping & Amenities */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Centennial Center</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Major Retail:</strong> Target, Costco, Home Depot, Best Buy, Kohl's</li>
+                    <li><strong>Grocery:</strong> Smith's, Trader Joe's, Whole Foods nearby</li>
+                    <li><strong>Dining:</strong> 50+ restaurants including Red Robin, BJ's, Cheesecake Factory</li>
+                    <li><strong>Entertainment:</strong> Century 18 Theatres, bowling, fitness centers</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Healthcare & Services</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Centennial Hills Hospital:</strong> Full-service hospital, 24/7 ER, maternity center</li>
+                    <li><strong>Southwest Medical:</strong> Multiple primary care and urgent care locations</li>
+                    <li><strong>Dignity Health:</strong> Clinics and specialty services</li>
+                    <li><strong>VA Medical Center:</strong> 10 minutes for veteran services</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Parks & Recreation */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Parks & Recreation</h3>
+              <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Centennial Hills offers extensive parks and recreation facilities:
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Centennial Hills Park:</strong> 120 acres with sports fields, playground, skate park, dog park</li>
+                    <li><strong>Centennial Hills YMCA:</strong> Full fitness facility, pools, youth programs</li>
+                    <li><strong>Centennial Hills Library:</strong> Modern library with programs and events</li>
+                  </ul>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Angel Park Golf Club:</strong> Two public courses, 36 holes of golf</li>
+                    <li><strong>Floyd Lamb Park:</strong> 15 minutes—680 acres, lakes, wildlife viewing</li>
+                    <li><strong>Mountain Trails:</strong> Easy access to BLM land for hiking and biking</li>
+                  </ul>
+                </div>
+              </div>
+
               <p className="mt-8">
                 The current market shows <strong>203 active listings</strong> with homes averaging
                 <strong> 25 days on market</strong>. The median price of <strong>$495,000</strong>

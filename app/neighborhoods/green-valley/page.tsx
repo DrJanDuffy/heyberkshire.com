@@ -176,6 +176,91 @@ export default function GreenValleyPage() {
                 </div>
               </div>
 
+              {/* School Districts */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Green Valley School Districts</h3>
+              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Green Valley is home to some of Henderson's most sought-after schools with 35+ years
+                  of proven excellence:
+                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Elise L. Wolff Elementary (9/10)</li>
+                      <li>• C.T. Sewell Elementary</li>
+                      <li>• Gordon McCaw Elementary</li>
+                      <li>• John C. Vanderburg Elementary</li>
+                      <li>• Gene Ward Elementary</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Green Valley High School (7/10)</li>
+                      <li>• Coronado High School (8/10)</li>
+                      <li>• Bob Miller Middle School</li>
+                      <li>• Burkholder Middle School</li>
+                      <li>• Greenspun Junior High</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Private Options</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Henderson International School</li>
+                      <li>• Pinecrest Academy (Charter)</li>
+                      <li>• Coral Academy of Science</li>
+                      <li>• St. Peter the Apostle School</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Commute Times */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Green Valley</h3>
+              <div className="not-prose overflow-x-auto">
+                <table className="w-full bg-white border border-slate-200 rounded-lg">
+                  <thead className="bg-slate-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    <tr><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">10 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">25-35 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">7 miles</td><td className="px-4 py-3">12 min</td><td className="px-4 py-3">18-25 min</td></tr>
+                    <tr><td className="px-4 py-3">Downtown Henderson</td><td className="px-4 py-3">3 miles</td><td className="px-4 py-3">8 min</td><td className="px-4 py-3">10-15 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Summerlin</td><td className="px-4 py-3">20 miles</td><td className="px-4 py-3">25 min</td><td className="px-4 py-3">35-50 min</td></tr>
+                    <tr><td className="px-4 py-3">Lake Mead</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">22 min</td><td className="px-4 py-3">25-30 min</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Local Amenities */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Recreation</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>The District at Green Valley Ranch:</strong> Premier outdoor shopping with Anthropologie, Crate & Barrel, REI, and 60+ shops.</li>
+                    <li><strong>Green Valley Ranch Resort:</strong> Casino, spa, multiple restaurants, concert venue.</li>
+                    <li><strong>Trader Joe's & Whole Foods:</strong> Both locations within 5 minutes of most Green Valley homes.</li>
+                    <li><strong>Galleria at Sunset:</strong> 10-minute drive to major mall with Macy's, Dillard's, 140+ stores.</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Parks & Recreation</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Whitney Mesa Recreation Area:</strong> Dog park, trails, mountain views.</li>
+                    <li><strong>Paseo Verde Park:</strong> 19-acre park with splash pad, tennis courts, playground.</li>
+                    <li><strong>Green Valley Athletic Club:</strong> Full-service gym with pools, tennis, dining.</li>
+                    <li><strong>Legacy Golf Club:</strong> Challenging 18-hole public course designed by Arthur Hills.</li>
+                  </ul>
+                </div>
+              </div>
+
               <p className="mt-8">
                 The current Green Valley market shows <strong>187 active listings</strong> with homes
                 averaging <strong>26 days on market</strong>. The median price of <strong>$520,000</strong>

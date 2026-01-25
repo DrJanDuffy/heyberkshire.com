@@ -176,6 +176,114 @@ export default function SouthernHighlandsPage() {
                 </div>
               </div>
 
+              {/* Schools */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Southern Highlands School Districts</h3>
+              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Southern Highlands is served by Clark County School District with some of southwest
+                  Las Vegas's highest-rated schools:
+                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Elise Wolff Elementary (9/10)</li>
+                      <li>• Janet Lundahl Elementary</li>
+                      <li>• Robert Forbuss Elementary</li>
+                      <li>• Floyd Elementary</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Coronado High School (8/10)</li>
+                      <li>• Liberty High School</li>
+                      <li>• Del Webb Middle School</li>
+                      <li>• Mannion Middle School</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Private Options</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Bishop Gorman High School</li>
+                      <li>• Pinecrest Academy</li>
+                      <li>• Henderson International</li>
+                      <li>• Coral Academy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Commute Times */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Southern Highlands</h3>
+              <div className="not-prose overflow-x-auto">
+                <table className="w-full bg-white border border-slate-200 rounded-lg">
+                  <thead className="bg-slate-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    <tr><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">8 miles</td><td className="px-4 py-3">12 min</td><td className="px-4 py-3">18-25 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">10 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">20-30 min</td></tr>
+                    <tr><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-35 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Henderson</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td><td className="px-4 py-3">25-35 min</td></tr>
+                    <tr><td className="px-4 py-3">Summerlin</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td><td className="px-4 py-3">35-45 min</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-slate-600 text-sm mt-2 not-prose">
+                Southern Highlands' I-15 access provides the fastest route to the Strip and airport from
+                any Las Vegas master-planned community—a key advantage for frequent travelers.
+              </p>
+
+              {/* Local Amenities */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Southern Highlands Marketplace:</strong> Grocery, restaurants, services within the community.</li>
+                    <li><strong>Town Square Las Vegas:</strong> 10 minutes—outdoor mall with Apple, Whole Foods, movie theater.</li>
+                    <li><strong>Las Vegas Premium Outlets South:</strong> 5 minutes—designer outlet shopping.</li>
+                    <li><strong>M Resort Spa Casino:</strong> Adjacent to community—gaming, dining, entertainment.</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Healthcare & Services</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>St. Rose Dominican - Siena:</strong> Full-service hospital, 10 minutes.</li>
+                    <li><strong>Southern Hills Hospital:</strong> 24/7 ER, comprehensive services, 12 minutes.</li>
+                    <li><strong>Southwest Medical:</strong> Multiple urgent care and primary care locations nearby.</li>
+                    <li><strong>Dignity Health:</strong> Clinics throughout the southwest valley.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Golf Club Details */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Southern Highlands Golf Club</h3>
+              <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  The Robert Trent Jones Jr. designed course is the community's centerpiece, offering
+                  private membership to residents and non-residents:
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Course Rating:</strong> 74.1 / Slope 140 (Championship)</li>
+                    <li><strong>Membership:</strong> Equity and non-equity options</li>
+                    <li><strong>Facilities:</strong> 35,000 sq ft clubhouse, fine dining</li>
+                  </ul>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Practice:</strong> Full range, short game area, putting greens</li>
+                    <li><strong>Events:</strong> Private tournaments, member socials</li>
+                    <li><strong>Dining:</strong> Multiple restaurants, bars, banquet facilities</li>
+                  </ul>
+                </div>
+              </div>
+
               <p className="mt-8">
                 The Southern Highlands market currently shows <strong>156 active listings</strong> with
                 homes averaging <strong>35 days on market</strong>. The median price of <strong>$750,000</strong>

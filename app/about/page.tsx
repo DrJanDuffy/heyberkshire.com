@@ -268,10 +268,10 @@ export default function AboutPage() {
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
                       Free Home Valuation
                     </Link>
-                    <Link href="/listings" className="flex items-center text-slate-700 hover:text-blue-600">
+                    <a href="http://drjanduffy.realscout.com/" target="_blank" rel="noopener noreferrer" className="flex items-center text-slate-700 hover:text-blue-600">
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
                       Browse Listings
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

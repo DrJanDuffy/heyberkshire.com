@@ -206,6 +206,122 @@ export default function MoveUpSellerPage() {
             </div>
           </section>
 
+          {/* Timing Strategies */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Timing Your Move-Up: Three Proven Strategies
+            </h2>
+            <div className="prose prose-lg max-w-none text-slate-700 mb-8">
+              <p>
+                The biggest concern move-up buyers have is timing. What happens if you sell before
+                finding your next home? What if you find your dream home but can't sell in time?
+                <strong> Berkshire Hathaway HomeServices</strong> agents like Dr. Jan Duffy have
+                strategies for every scenario, ensuring you never end up homeless or paying two
+                mortgages unnecessarily.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white border border-slate-200 rounded-xl p-6">
+                <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <span className="text-blue-600 font-bold text-xl">1</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2">Sell First, Then Buy</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  The safest approach: sell your home, secure your equity, then purchase with
+                  confidence and negotiating power.
+                </p>
+                <div className="text-sm">
+                  <p className="text-green-600 font-medium">Best for:</p>
+                  <p className="text-slate-500">Risk-averse buyers; competitive purchase markets</p>
+                  <p className="text-amber-600 font-medium mt-2">Consider:</p>
+                  <p className="text-slate-500">May need temporary housing; rent-back negotiation possible</p>
+                </div>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-6">
+                <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <span className="text-green-600 font-bold text-xl">2</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2">Buy First, Then Sell</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  Lock in your dream home before listing. Requires bridge financing or sufficient
+                  reserves to carry two properties temporarily.
+                </p>
+                <div className="text-sm">
+                  <p className="text-green-600 font-medium">Best for:</p>
+                  <p className="text-slate-500">Buyers with strong equity or savings; hot seller's markets</p>
+                  <p className="text-amber-600 font-medium mt-2">Consider:</p>
+                  <p className="text-slate-500">Bridge loan costs; carrying costs if sale delays</p>
+                </div>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-6">
+                <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <span className="text-purple-600 font-bold text-xl">3</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2">Simultaneous Close</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  Sell and buy on the same day. Requires precise coordination and contingency
+                  management, but eliminates double-moving and temporary housing.
+                </p>
+                <div className="text-sm">
+                  <p className="text-green-600 font-medium">Best for:</p>
+                  <p className="text-slate-500">Experienced buyers; balanced markets; strong coordination</p>
+                  <p className="text-amber-600 font-medium mt-2">Consider:</p>
+                  <p className="text-slate-500">Higher stress; requires flexible closing dates</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Financing Options */}
+          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              Financing Your Move-Up Purchase
+            </h2>
+            <p className="text-slate-300 text-center mb-8 max-w-3xl mx-auto">
+              Understanding your financing options is crucial for a successful move-up transaction.
+              Dr. Jan works with trusted local lenders who specialize in helping Las Vegas homeowners
+              leverage their equity into their next home.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white/10 rounded-xl p-6">
+                <DollarSign className="h-8 w-8 text-green-400 mb-4" />
+                <h3 className="font-bold text-lg mb-2">Bridge Loans</h3>
+                <p className="text-slate-300 text-sm">
+                  Short-term financing that lets you use your current home's equity as a down payment
+                  before selling. Typically 6-12 month terms with interest-only payments. Rates are
+                  higher than traditional mortgages but provide flexibility.
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-xl p-6">
+                <DollarSign className="h-8 w-8 text-blue-400 mb-4" />
+                <h3 className="font-bold text-lg mb-2">Home Equity Line of Credit (HELOC)</h3>
+                <p className="text-slate-300 text-sm">
+                  Access your equity before selling to fund your down payment. Must be established
+                  in advance (typically 30-45 days). Lower rates than bridge loans but requires
+                  planning ahead.
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-xl p-6">
+                <Shield className="h-8 w-8 text-purple-400 mb-4" />
+                <h3 className="font-bold text-lg mb-2">Sale Contingency</h3>
+                <p className="text-slate-300 text-sm">
+                  Make your purchase offer contingent on selling your current home. Less common in
+                  competitive markets, but can work with motivated sellers or longer closing windows.
+                  Dr. Jan knows how to structure these offers effectively.
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-xl p-6">
+                <Calendar className="h-8 w-8 text-amber-400 mb-4" />
+                <h3 className="font-bold text-lg mb-2">Rent-Back Agreement</h3>
+                <p className="text-slate-300 text-sm">
+                  Sell your home but remain as a renter for 30-60 days while you close on your new
+                  property. Provides breathing room without needing temporary housing. Common and
+                  often negotiable in today's market.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
@@ -219,6 +335,42 @@ export default function MoveUpSellerPage() {
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
               </cite>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Move-Up Seller FAQs
+            </h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "How much equity do I need to move up?",
+                  a: "Most move-up buyers have 20-40% equity in their current home. If you purchased between 2015-2021, Las Vegas appreciation means you likely have $100,000-$250,000+ in equity. Dr. Jan provides free equity analysis to show exactly what you have to work with.",
+                },
+                {
+                  q: "What if I can't find a new home before selling?",
+                  a: "Several options exist: negotiate a rent-back agreement (stay in your sold home for 30-60 days), arrange temporary housing, or use a bridge loan to buy before selling. Dr. Jan helps you choose the best strategy for your situation.",
+                },
+                {
+                  q: "Should I upgrade or just get more space?",
+                  a: "It depends on your goals. Sometimes moving to a larger home in your current neighborhood is the best value. Other times, upgrading to a premium location provides better long-term appreciation. Dr. Jan analyzes both options to help you decide.",
+                },
+                {
+                  q: "How do schools factor into a move-up decision?",
+                  a: "Schools significantly impact both your quality of life and resale value. Moving to better school zones (like Summerlin's Palo Verde High School district or Henderson's Coronado) often justifies higher prices through appreciation and demand.",
+                },
+                {
+                  q: "What are the tax implications of selling and buying?",
+                  a: "If you've lived in your home 2+ years, up to $250,000 ($500,000 for couples) in gains are tax-free. For larger gains, consult a tax advisor. Dr. Jan can refer you to trusted CPAs who specialize in real estate transactions.",
+                },
+              ].map((faq, index) => (
+                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
+                  <p className="text-slate-600">{faq.a}</p>
+                </div>
+              ))}
             </div>
           </section>
 

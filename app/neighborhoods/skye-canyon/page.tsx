@@ -176,6 +176,114 @@ export default function SkyeCanyonPage() {
                 </div>
               </div>
 
+              {/* Schools */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Skye Canyon Schools</h3>
+              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Skye Canyon features newer schools purpose-built for the community, plus access to
+                  established northwest schools:
+                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Elementary</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Skye Canyon Elementary (New)</li>
+                      <li>• Floyd Elementary</li>
+                      <li>• Mabel Hoggard Elementary</li>
+                      <li>• Escobedo Middle School</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Middle & High</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Shadow Ridge High School</li>
+                      <li>• Arbor View High School</li>
+                      <li>• Bilbray Middle School</li>
+                      <li>• Garrett Middle School</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Charter/Private</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Pinecrest Academy</li>
+                      <li>• Somerset Academy</li>
+                      <li>• Coral Academy</li>
+                      <li>• Faith Lutheran (15 min)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Commute Times */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Skye Canyon</h3>
+              <div className="not-prose overflow-x-auto">
+                <table className="w-full bg-white border border-slate-200 rounded-lg">
+                  <thead className="bg-slate-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    <tr><td className="px-4 py-3">Downtown Summerlin</td><td className="px-4 py-3">8 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">20-30 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">18 miles</td><td className="px-4 py-3">25 min</td><td className="px-4 py-3">35-50 min</td></tr>
+                    <tr><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">22 miles</td><td className="px-4 py-3">28 min</td><td className="px-4 py-3">40-55 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Centennial Hills</td><td className="px-4 py-3">5 miles</td><td className="px-4 py-3">10 min</td><td className="px-4 py-3">12-18 min</td></tr>
+                    <tr><td className="px-4 py-3">Floyd Lamb Park</td><td className="px-4 py-3">Adjacent</td><td className="px-4 py-3">5 min</td><td className="px-4 py-3">5 min</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Builders */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Active Builders in Skye Canyon</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Premium Builders</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Toll Brothers:</strong> Luxury homes from $600K-$800K. Known for quality and customization.</li>
+                    <li><strong>Woodside Homes:</strong> Mid-range to premium, $500K-$700K. Strong value.</li>
+                    <li><strong>Shea Homes:</strong> Energy-efficient designs, $550K-$750K.</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Value Builders</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Lennar:</strong> Entry to mid-range, $450K-$600K. "Everything's Included" packages.</li>
+                    <li><strong>KB Home:</strong> Energy Star certified, $420K-$550K. Customization options.</li>
+                    <li><strong>Century Communities:</strong> Affordable entry points, $400K-$520K.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Amenities */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Skye Canyon Amenities</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Skye Center Features</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li>• Resort-style pool with cabanas</li>
+                    <li>• Zero-entry family pool and splash pad</li>
+                    <li>• Lap pool for fitness swimming</li>
+                    <li>• State-of-the-art fitness center</li>
+                    <li>• Tennis and pickleball courts</li>
+                    <li>• Community event lawn</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Outdoor Recreation</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li>• Floyd Lamb Park (680 acres adjacent)</li>
+                    <li>• 10+ miles of community trails</li>
+                    <li>• Multiple neighborhood parks</li>
+                    <li>• Dog parks throughout community</li>
+                    <li>• Mountain biking access</li>
+                    <li>• Desert hiking nearby</li>
+                  </ul>
+                </div>
+              </div>
+
               <p className="mt-8">
                 The current Skye Canyon market shows <strong>124 active listings</strong> with homes
                 averaging just <strong>21 days on market</strong>—among the fastest in the valley.

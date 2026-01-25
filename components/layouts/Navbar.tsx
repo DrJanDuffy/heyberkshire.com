@@ -19,11 +19,11 @@ export default function Navbar() {
   }, []);
 
   const mainNavLinks = [
-    { href: "/", label: "Home" },
-    { href: "/listings", label: "Properties" },
-    { href: "/neighborhoods", label: "Neighborhoods" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Home", external: false },
+    { href: "http://drjanduffy.realscout.com/", label: "Properties", external: true },
+    { href: "/neighborhoods", label: "Neighborhoods", external: false },
+    { href: "/about", label: "About", external: false },
+    { href: "/contact", label: "Contact", external: false },
   ];
 
   const serviceLinks = [
@@ -55,15 +55,27 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-5">
-            {mainNavLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {mainNavLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
 
             {/* Services Dropdown */}
             <div className="relative">
@@ -125,16 +137,29 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-slate-200">
             <div className="flex flex-col space-y-1 pt-4">
-              {mainNavLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-colors py-2 px-3 rounded"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {mainNavLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-colors py-2 px-3 rounded"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-colors py-2 px-3 rounded"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
 
               {/* Services Section */}
               <div className="border-t border-slate-200 pt-2 mt-2">

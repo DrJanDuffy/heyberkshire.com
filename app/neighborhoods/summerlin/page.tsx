@@ -185,6 +185,98 @@ export default function SummerlinPage() {
                 </div>
               </div>
 
+              {/* School Districts */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Summerlin School Districts</h3>
+              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Summerlin is served by the Clark County School District with some of Nevada's
+                  highest-rated public schools, plus excellent private options:
+                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Sig Rogich Middle School (9/10)</li>
+                      <li>• William R. Lummis Elementary</li>
+                      <li>• Marion Earl Elementary</li>
+                      <li>• Helen Smith Elementary</li>
+                      <li>• John C. Vanderburg Elementary</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Palo Verde High School (8/10)</li>
+                      <li>• West Career & Technical Academy</li>
+                      <li>• Del E. Webb Middle School</li>
+                      <li>• Sig Rogich Middle School</li>
+                      <li>• The Meadows School (Private)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Private Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Bishop Gorman High School</li>
+                      <li>• The Meadows School (K-12)</li>
+                      <li>• Faith Lutheran Middle & High</li>
+                      <li>• American Heritage Academy</li>
+                      <li>• Pinecrest Academy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Commute Times */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Summerlin</h3>
+              <div className="not-prose overflow-x-auto">
+                <table className="w-full bg-white border border-slate-200 rounded-lg">
+                  <thead className="bg-slate-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    <tr><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-35 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">10 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">25-40 min</td></tr>
+                    <tr><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td><td className="px-4 py-3">30-45 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Henderson</td><td className="px-4 py-3">22 miles</td><td className="px-4 py-3">28 min</td><td className="px-4 py-3">40-55 min</td></tr>
+                    <tr><td className="px-4 py-3">Red Rock Canyon</td><td className="px-4 py-3">5 miles</td><td className="px-4 py-3">10 min</td><td className="px-4 py-3">10-15 min</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Local Amenities */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <div className="flex items-center mb-4">
+                    <ShoppingBag className="h-6 w-6 text-blue-600 mr-2" />
+                    <h5 className="font-bold text-slate-900">Shopping & Dining</h5>
+                  </div>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Downtown Summerlin:</strong> 125+ stores, restaurants, movie theater. Apple, Nordstrom, Williams Sonoma.</li>
+                    <li><strong>Boca Park:</strong> Trader Joe's, Whole Foods, local restaurants on West Charleston.</li>
+                    <li><strong>Tivoli Village:</strong> Upscale outdoor shopping with Restoration Hardware, boutiques, and fine dining.</li>
+                    <li><strong>Red Rock Casino Resort:</strong> Gaming, spa, multiple restaurants including T-Bones Chophouse.</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <div className="flex items-center mb-4">
+                    <TreePine className="h-6 w-6 text-blue-600 mr-2" />
+                    <h5 className="font-bold text-slate-900">Healthcare & Services</h5>
+                  </div>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Summerlin Hospital:</strong> Full-service hospital with ER, labor & delivery, cardiology center.</li>
+                    <li><strong>Red Rock Medical Campus:</strong> Outpatient surgery, imaging, specialty clinics.</li>
+                    <li><strong>Dignity Health:</strong> Multiple urgent care and primary care locations throughout Summerlin.</li>
+                    <li><strong>Southwest Medical:</strong> Multi-specialty clinics with pharmacy services.</li>
+                  </ul>
+                </div>
+              </div>
+
               <p className="mt-8">
                 The current Summerlin real estate market shows strong demand with <strong>342 active listings</strong> and
                 an average of just <strong>22 days on market</strong>. The median home price of <strong>$625,000</strong> represents

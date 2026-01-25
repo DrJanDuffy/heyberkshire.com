@@ -237,6 +237,194 @@ export default function DownsizingPage() {
             </div>
           </section>
 
+          {/* 55+ Community Comparison */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Top 55+ Communities for Las Vegas Downsizers
+            </h2>
+            <p className="text-slate-600 text-center mb-8 max-w-3xl mx-auto">
+              Las Vegas offers some of the nation's best 55+ communities. Here's how the most popular
+              options compare for downsizers looking to maximize their lifestyle while minimizing maintenance.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full bg-white border border-slate-200 rounded-lg">
+                <thead className="bg-slate-50">
+                  <tr>
+                    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Community</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Price Range</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">HOA/Mo</th>
+                    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Top Amenity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { name: "Sun City Summerlin", price: "$375K-$650K", hoa: "$165-$220", amenity: "4 golf courses" },
+                    { name: "Sun City Anthem", price: "$400K-$700K", hoa: "$150-$200", amenity: "Mountain views" },
+                    { name: "Heritage at Stonebridge", price: "$450K-$600K", hoa: "$175-$225", amenity: "Resort pool" },
+                    { name: "Del Webb Lake Las Vegas", price: "$400K-$650K", hoa: "$180-$250", amenity: "Lake access" },
+                    { name: "Solera at Anthem", price: "$375K-$550K", hoa: "$140-$180", amenity: "Smaller, intimate" },
+                  ].map((community, index) => (
+                    <tr key={community.name} className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <td className="px-4 py-3 font-medium text-slate-900">{community.name}</td>
+                      <td className="px-4 py-3 text-slate-700">{community.price}</td>
+                      <td className="px-4 py-3 text-slate-700">{community.hoa}</td>
+                      <td className="px-4 py-3 text-slate-700">{community.amenity}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-center mt-4">
+              <Link href="/55-plus-communities" className="text-blue-600 hover:text-blue-700 font-semibold">
+                View Detailed 55+ Community Guide →
+              </Link>
+            </p>
+          </section>
+
+          {/* What to Consider */}
+          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Key Considerations When Downsizing
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-bold text-lg text-slate-900 mb-4">Financial Factors</h3>
+                <ul className="space-y-3 text-slate-700">
+                  <li className="flex items-start">
+                    <DollarSign className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>HOA Fees:</strong> 55+ communities range from $140-$250/month. Ensure you understand what's included (landscaping, exterior maintenance, amenities).
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <DollarSign className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Capital Gains:</strong> If you've lived in your home 2+ years, up to $500,000 (married) in gains are tax-free. Consult a CPA for larger gains.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <DollarSign className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Insurance Costs:</strong> Smaller homes and condos often have lower insurance. Some 55+ communities include exterior coverage in HOA.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-bold text-lg text-slate-900 mb-4">Lifestyle Factors</h3>
+                <ul className="space-y-3 text-slate-700">
+                  <li className="flex items-start">
+                    <Users className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Guest Space:</strong> Kids and grandkids still visit. Consider a home with a guest room or nearby vacation rentals for overflow.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Users className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Healthcare Access:</strong> Proximity to hospitals matters. Summerlin Hospital, Henderson Hospital, and Centennial Hills Hospital serve different areas.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Users className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Social Activities:</strong> 55+ communities offer built-in social networks. If that's not appealing, consider active neighborhoods like Green Valley or Summerlin.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* The Downsizing Process */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              The Downsizing Process with Dr. Jan Duffy
+            </h2>
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Discovery Conversation</h3>
+                  <p className="text-slate-600">
+                    We start with a no-pressure conversation about your goals. What's driving your decision?
+                    What features are must-haves in your next home? What lifestyle do you want? This helps
+                    Dr. Jan understand your needs beyond just the numbers.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">2</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Equity Analysis & Options Review</h3>
+                  <p className="text-slate-600">
+                    Dr. Jan provides a comprehensive market analysis of your current home, showing exactly
+                    how much equity you have. Then she presents downsizing options that fit your budget,
+                    comparing 55+ communities, single-story homes, and condos.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">3</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Tour & Compare</h3>
+                  <p className="text-slate-600">
+                    Visit potential new homes and communities at your pace. Dr. Jan provides insight into
+                    HOA financial health, community culture, and resale trends. No pressure—this is about
+                    finding what feels right.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">4</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Coordinated Transaction</h3>
+                  <p className="text-slate-600">
+                    When you're ready, Dr. Jan coordinates both the sale of your current home and purchase
+                    of your new one. Timing is synchronized so you're never homeless or carrying two mortgages.
+                    She handles all the details while you focus on your next chapter.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Downsizing FAQs
+            </h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "How much can I expect to pocket when downsizing?",
+                  a: "Most downsizers moving from large family homes ($650K-$900K) to 55+ communities or condos ($400K-$550K) walk away with $150,000-$350,000+ in net equity after all costs. Dr. Jan provides a detailed projection based on your specific situation.",
+                },
+                {
+                  q: "What if my home needs repairs before selling?",
+                  a: "Dr. Jan helps you prioritize repairs that matter—and skip those that don't. Often, minor cosmetic updates (paint, landscaping) provide the best ROI. For larger issues, she can connect you with contractors or explore as-is selling options.",
+                },
+                {
+                  q: "How do I choose between 55+ communities?",
+                  a: "Key factors include HOA fees and what they cover, community size and culture, amenities that match your interests, location relative to family/healthcare, and financial stability of the HOA. Dr. Jan tours communities with you and provides unbiased comparisons.",
+                },
+                {
+                  q: "Can I buy before selling my current home?",
+                  a: "Yes, several options exist: bridge loans, HELOCs, or making offers contingent on selling. Dr. Jan works with lenders who specialize in these scenarios and can advise on the best approach for your financial situation.",
+                },
+                {
+                  q: "What about all my stuff?",
+                  a: "Decluttering is part of downsizing. Dr. Jan recommends starting early—months before listing. She can refer you to professional organizers and estate sale companies if needed. Many clients find the process liberating once they start.",
+                },
+              ].map((faq, index) => (
+                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
+                  <p className="text-slate-600">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-900 text-white rounded-xl p-8">

@@ -176,6 +176,112 @@ export default function MountainsEdgePage() {
                 </div>
               </div>
 
+              {/* Schools */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Mountains Edge School Districts</h3>
+              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Mountains Edge is served by Clark County School District with several newer schools
+                  built for the growing community:
+                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Stuckey Elementary</li>
+                      <li>• Wright Elementary</li>
+                      <li>• Cynthia Cunningham Elementary</li>
+                      <li>• Ernest Becker Elementary</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Sierra Vista High School</li>
+                      <li>• Liberty High School</li>
+                      <li>• Mannion Middle School</li>
+                      <li>• Del Webb Middle School</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Charter/Private</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Pinecrest Academy</li>
+                      <li>• Coral Academy of Science</li>
+                      <li>• Somerset Academy</li>
+                      <li>• Bishop Gorman (15 min)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Commute Times */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Mountains Edge</h3>
+              <div className="not-prose overflow-x-auto">
+                <table className="w-full bg-white border border-slate-200 rounded-lg">
+                  <thead className="bg-slate-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    <tr><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">10 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">20-30 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-35 min</td></tr>
+                    <tr><td className="px-4 py-3">Downtown Las Vegas</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">22 min</td><td className="px-4 py-3">30-40 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Henderson</td><td className="px-4 py-3">15 miles</td><td className="px-4 py-3">20 min</td><td className="px-4 py-3">25-35 min</td></tr>
+                    <tr><td className="px-4 py-3">Southern Highlands</td><td className="px-4 py-3">5 miles</td><td className="px-4 py-3">10 min</td><td className="px-4 py-3">12-15 min</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-slate-600 text-sm mt-2 not-prose">
+                Mountains Edge's I-215 access provides excellent connectivity to both I-15 and the entire valley.
+              </p>
+
+              {/* Shopping & Amenities */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Shopping, Dining & Healthcare</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Shopping & Entertainment</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Mountains Edge Marketplace:</strong> Smith's, CVS, restaurants, services within community</li>
+                    <li><strong>Town Square Las Vegas:</strong> 10 min—Whole Foods, Apple, AMC Theatre, 150+ stores</li>
+                    <li><strong>Las Vegas Premium Outlets South:</strong> 10 min—Designer outlet shopping</li>
+                    <li><strong>M Resort Spa Casino:</strong> 10 min—Gaming, dining, spa, entertainment</li>
+                  </ul>
+                </div>
+                <div className="bg-slate-50 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Healthcare & Services</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Southern Hills Hospital:</strong> Full-service hospital, 24/7 ER, 10 minutes</li>
+                    <li><strong>St. Rose Dominican - Siena:</strong> Comprehensive healthcare, 12 minutes</li>
+                    <li><strong>Southwest Medical:</strong> Multiple clinics throughout southwest valley</li>
+                    <li><strong>Dignity Health:</strong> Urgent care and primary care locations</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Parks & Recreation */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Parks & Recreation</h3>
+              <div className="not-prose bg-green-50 border border-green-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Mountains Edge features exceptional outdoor amenities centered around Exploration Peak Park:
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Exploration Peak Park:</strong> 120 acres—valley's largest park. Hiking trails to summit with 360° views of Strip and mountains.</li>
+                    <li><strong>Mountains Edge Regional Park:</strong> Sports fields, playground, splash pad, walking trails</li>
+                    <li><strong>Community Pools:</strong> Multiple pool facilities throughout the community</li>
+                  </ul>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Trail System:</strong> Miles of walking/biking trails connecting neighborhoods</li>
+                    <li><strong>Dog Parks:</strong> Multiple off-leash areas for pets</li>
+                    <li><strong>Golf:</strong> Rhodes Ranch Golf Club and Southern Highlands Golf Club nearby</li>
+                  </ul>
+                </div>
+              </div>
+
               <p className="mt-8">
                 The current market shows <strong>234 active listings</strong> with homes averaging
                 <strong> 27 days on market</strong>. The median price of <strong>$475,000</strong>

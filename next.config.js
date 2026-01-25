@@ -1,5 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Redirect non-www to www
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'heyberkshire.com',
+          },
+        ],
+        destination: 'https://www.heyberkshire.com/:path*',
+        permanent: true,
+      },
+    ]
+  },
   rewrites: async () => {
     return [
       {

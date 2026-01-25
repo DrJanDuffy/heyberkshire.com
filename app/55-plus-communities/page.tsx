@@ -373,13 +373,15 @@ export default function FiftyFiveCommunitiesPage() {
                 <Phone className="h-5 w-5 mr-2" />
                 Call (702) 500-1942
               </a>
-              <Link
-                href="#communities"
+              <a
+                href="http://drjanduffy.realscout.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-slate-100 text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-200 transition-colors"
               >
                 Explore Communities
                 <ArrowRight className="h-5 w-5 ml-2" />
-              </Link>
+              </a>
             </div>
           </div>
 

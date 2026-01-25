@@ -307,6 +307,174 @@ export default function RelocationPage() {
             </div>
           </section>
 
+          {/* Common Relocation Destinations */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Popular Relocation Destinations from Las Vegas
+            </h2>
+            <p className="text-slate-600 text-center mb-8 max-w-3xl mx-auto">
+              Whether you're relocating for tech jobs in the Bay Area, corporate opportunities in Texas,
+              or sunshine in Florida, Dr. Jan connects you with top BHHS agents in your new city.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { city: "Phoenix, AZ", insight: "Closer to family, lower cost than California. Strong job market in healthcare and tech.", time: "4-5 hour drive" },
+                { city: "Dallas/Fort Worth, TX", insight: "No state income tax, booming corporate relocation hub. Major employers: AT&T, Toyota, CBRE.", time: "3-hour flight" },
+                { city: "Los Angeles, CA", insight: "Entertainment, aerospace, tech. Higher cost but familiar Southwest climate.", time: "4-hour drive" },
+                { city: "Denver, CO", insight: "Outdoor lifestyle, growing tech hub. Higher altitude, four seasons.", time: "2-hour flight" },
+                { city: "Austin, TX", insight: "Tech boom, no state income tax. Tesla, Oracle, Apple campuses.", time: "2.5-hour flight" },
+                { city: "Seattle, WA", insight: "Amazon, Microsoft, Boeing. Rainy but vibrant tech scene.", time: "2.5-hour flight" },
+              ].map((dest) => (
+                <div key={dest.city} className="bg-white border border-slate-200 rounded-xl p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">{dest.city}</h3>
+                  <p className="text-slate-600 text-sm mb-3">{dest.insight}</p>
+                  <p className="text-blue-600 text-xs font-medium">Travel: {dest.time}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* The Relocation Process */}
+          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              The Relocation Process Step by Step
+            </h2>
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Initial Consultation</h3>
+                  <p className="text-slate-600">
+                    Discuss your timeline, job start date, corporate relo benefits (if any), and priorities.
+                    Dr. Jan creates a customized plan whether you have 2 weeks or 2 months.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">2</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Destination Agent Connection</h3>
+                  <p className="text-slate-600">
+                    Dr. Jan introduces you to a top-producing BHHS agent in your new city. They're briefed
+                    on your timeline, budget, and preferences before your first conversation.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">3</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Las Vegas Home Preparation</h3>
+                  <p className="text-slate-600">
+                    While you focus on your new opportunity, Dr. Jan coordinates staging, photography,
+                    and any needed repairs. She oversees everything so you don't need to be present.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">4</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Coordinated Sale & Purchase</h3>
+                  <p className="text-slate-600">
+                    Both agents communicate to align timelines. Dr. Jan negotiates closing dates,
+                    rent-backs, and contingencies that protect you on both ends of the transaction.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">5</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Remote Closing</h3>
+                  <p className="text-slate-600">
+                    Electronic signatures and remote notarization mean you can close from anywhere.
+                    Dr. Jan coordinates with the title company and ensures everything transfers smoothly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Relocation FAQs
+            </h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "My job starts in 3 weeks. Is that enough time to sell?",
+                  a: "Yes—urgently, but it's possible. We can list immediately, price aggressively for quick sale, and leverage our investor/cash buyer network. You may leave before closing, but we manage everything remotely. Dr. Jan has helped many clients sell within 2-4 weeks when necessary.",
+                },
+                {
+                  q: "Should I sell before or after I move?",
+                  a: "It depends on your finances and timeline. Selling first means you know exactly how much equity you have for your new purchase. Selling after gives you time to settle in but requires carrying costs or a bridge loan. Dr. Jan advises based on your specific situation.",
+                },
+                {
+                  q: "What if I have a corporate buyout offer?",
+                  a: "Corporate buyouts typically offer 90-95% of appraised value. Sometimes you can do better selling on the open market. Dr. Jan provides a market analysis so you can compare the buyout to likely market sale proceeds (minus costs).",
+                },
+                {
+                  q: "How do I handle showings if I've already left?",
+                  a: "Dr. Jan manages everything: lockbox access, feedback collection, and offer presentation via video call. Many relocating sellers are long gone before their home sells—it's routine and we have systems for it.",
+                },
+                {
+                  q: "What about my stuff? Should I move it before listing?",
+                  a: "Partially furnished homes often show better than empty ones. Dr. Jan advises on what to take, what to leave, and whether professional staging makes sense. For urgent sales, we can list with minimal preparation.",
+                },
+              ].map((faq, index) => (
+                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
+                  <p className="text-slate-600">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Coming TO Las Vegas */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Relocating TO Las Vegas?
+            </h2>
+            <div className="bg-green-50 border border-green-200 rounded-xl p-8">
+              <p className="text-slate-700 mb-4">
+                If you're moving TO Las Vegas from another city, Dr. Jan welcomes referrals from BHHS
+                agents nationwide. She provides:
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <ul className="space-y-2 text-slate-700">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    Virtual neighborhood tours before you arrive
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    School district guidance and commute analysis
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    New construction vs resale comparisons
+                  </li>
+                </ul>
+                <ul className="space-y-2 text-slate-700">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    Temporary housing recommendations
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    Local service provider referrals
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    Coordination with your selling agent
+                  </li>
+                </ul>
+              </div>
+              <p className="text-green-800 font-medium mt-4">
+                Moving to Las Vegas? <Link href="/contact" className="underline">Contact Dr. Jan</Link> to start your home search.
+              </p>
+            </div>
+          </section>
+
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-900 text-white rounded-xl p-8">

@@ -270,6 +270,216 @@ export default function DivorceProbatePage() {
             </div>
           </section>
 
+          {/* Nevada-Specific Information */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Nevada-Specific Considerations
+            </h2>
+            <div className="prose prose-lg max-w-none text-slate-700 mb-8">
+              <p>
+                Nevada has unique laws that affect divorce and probate real estate sales. Understanding
+                these nuances is critical for a smooth transaction. Dr. Jan Duffy has extensive experience
+                navigating Nevada's specific requirements.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-lg text-slate-900 mb-4">Nevada Divorce Sales</h3>
+                <ul className="space-y-3 text-slate-700">
+                  <li className="flex items-start">
+                    <Scale className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Community Property State:</strong> Nevada is one of nine community property
+                      states. Assets acquired during marriage are typically split 50/50, including real
+                      estate appreciation.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Scale className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Joint Decision Required:</strong> Both spouses must agree on listing price,
+                      offers, and closing terms—or a court order is needed. Dr. Jan facilitates agreement
+                      through documented processes.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Scale className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Court Approval:</strong> Some divorce decrees require court approval for
+                      real estate sales. Dr. Jan coordinates timing with your attorney.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-lg text-slate-900 mb-4">Nevada Probate Sales</h3>
+                <ul className="space-y-3 text-slate-700">
+                  <li className="flex items-start">
+                    <FileText className="h-5 w-5 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Probate Timeline:</strong> Nevada probate typically takes 6-12 months. Real
+                      estate can often be sold during this period with proper court authorization.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <FileText className="h-5 w-5 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Letters Testamentary:</strong> The personal representative needs Letters
+                      Testamentary to legally sell. We wait for these before listing but can prepare
+                      the property in advance.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <FileText className="h-5 w-5 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Court Confirmation:</strong> Some sales require court confirmation, especially
+                      if sold below appraised value. Dr. Jan understands these requirements and timelines.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* The Process */}
+          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              How We Handle Sensitive Transactions
+            </h2>
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">1</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Confidential Initial Consultation</h3>
+                  <p className="text-slate-600">
+                    We start with a private conversation—in person, by phone, or video. Dr. Jan learns about
+                    your situation, timeline, and concerns. For divorce cases, she can meet with parties
+                    separately if needed. All discussions are confidential.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">2</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Professional Valuation & Documentation</h3>
+                  <p className="text-slate-600">
+                    A comprehensive market analysis provides an objective valuation—crucial for divorce
+                    settlements and probate proceedings. This documented valuation can be submitted to
+                    courts and attorneys as needed.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">3</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Coordinated Listing Strategy</h3>
+                  <p className="text-slate-600">
+                    Once all parties agree (or court authorization is obtained), we list the property with
+                    appropriate marketing. We can use discrete marketing if privacy is a priority, or
+                    full exposure if speed is the goal.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">4</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Multi-Party Communication</h3>
+                  <p className="text-slate-600">
+                    All parties and their representatives receive the same information simultaneously.
+                    Showings, offers, and negotiations are documented and shared transparently. No one
+                    is left out of the loop.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">5</div>
+                <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
+                  <h3 className="font-bold text-slate-900 mb-2">Clean Closing & Distribution</h3>
+                  <p className="text-slate-600">
+                    We coordinate with the title company to ensure proceeds are distributed according to
+                    court orders or agreements. For probate, we ensure proper documentation for estate
+                    accounting.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "Can one spouse sell the house without the other's consent?",
+                  a: "In Nevada, generally no. Both spouses must agree to sell community property. If one spouse refuses, the other can petition the court for an order to sell. Dr. Jan has worked with many cases where court intervention was needed and can provide valuations and testimony if required.",
+                },
+                {
+                  q: "How long does a probate sale take in Nevada?",
+                  a: "The probate process typically takes 6-12 months, but the house can often be sold during this period. Once Letters Testamentary are issued, the personal representative has authority to list. The actual sale (listing to closing) usually takes 30-60 days, similar to regular sales.",
+                },
+                {
+                  q: "Do I need to make repairs before selling an estate property?",
+                  a: "Not necessarily. Many estate sales are 'as-is' to avoid further estate expenses. Dr. Jan can advise on whether minimal improvements would significantly increase the sale price. She also has connections to estate cleanout services and can coordinate property preparation.",
+                },
+                {
+                  q: "What if the divorcing parties disagree on the listing price?",
+                  a: "Dr. Jan provides an objective market analysis that both parties can review. If disagreement persists, a formal appraisal (at shared cost) can settle the matter. In contentious cases, the listing price may be court-ordered based on appraised value.",
+                },
+                {
+                  q: "Can I sell a property if there are multiple heirs who disagree?",
+                  a: "Yes, but it requires navigating the disagreement. Often, one heir can buy out others. If that's not possible, a partition action may force a sale. Dr. Jan has experience facilitating consensus and can work with your estate attorney on options.",
+                },
+                {
+                  q: "What happens to the mortgage during a divorce sale?",
+                  a: "The mortgage is paid off at closing from the sale proceeds. If the home is underwater (worth less than owed), options include short sale negotiation with the lender or other arrangements. Dr. Jan can advise on the best approach for your situation.",
+                },
+              ].map((faq, index) => (
+                <div key={index} className="bg-white border border-slate-200 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
+                  <p className="text-slate-600">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Why BHHS Matters */}
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+              Why Berkshire Hathaway HomeServices for Sensitive Sales
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">
+                <Shield className="h-10 w-10 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-bold text-slate-900 mb-2">Credibility & Trust</h3>
+                <p className="text-slate-600 text-sm">
+                  The Berkshire Hathaway name carries weight with attorneys, judges, and opposing
+                  parties. Our valuations and processes are respected because of the brand's
+                  reputation for integrity.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">
+                <Scale className="h-10 w-10 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-bold text-slate-900 mb-2">Professional Standards</h3>
+                <p className="text-slate-600 text-sm">
+                  BHHS agents follow strict ethical guidelines and documentation standards. This
+                  protects all parties and provides a defensible paper trail for legal proceedings.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-xl p-6 text-center">
+                <Users className="h-10 w-10 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-bold text-slate-900 mb-2">Expert Network</h3>
+                <p className="text-slate-600 text-sm">
+                  Dr. Jan has established relationships with family law attorneys, probate
+                  specialists, and estate planners throughout Las Vegas. She can refer trusted
+                  professionals if you need legal guidance.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-900 text-white rounded-xl p-8">

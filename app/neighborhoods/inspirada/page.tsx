@@ -176,6 +176,110 @@ export default function InspiradaPage() {
                 </div>
               </div>
 
+              {/* Schools */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Inspirada School Districts</h3>
+              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
+                <p className="text-slate-700 mb-4">
+                  Inspirada is served by excellent Henderson schools, with newer facilities built to
+                  serve the growing community:
+                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Elementary Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Inspirada Elementary (New)</li>
+                      <li>• Lomie Heard Elementary</li>
+                      <li>• Glen Taylor Elementary</li>
+                      <li>• Wright Elementary</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Middle & High Schools</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Coronado High School (8/10)</li>
+                      <li>• Foothill High School</li>
+                      <li>• Del Webb Middle School</li>
+                      <li>• Mannion Middle School</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-900 mb-2">Private Options</h5>
+                    <ul className="text-slate-600 text-sm space-y-1">
+                      <li>• Henderson International</li>
+                      <li>• Pinecrest Academy</li>
+                      <li>• Coral Academy</li>
+                      <li>• The Adelson School</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Commute Times */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Commute Times from Inspirada</h3>
+              <div className="not-prose overflow-x-auto">
+                <table className="w-full bg-white border border-slate-200 rounded-lg">
+                  <thead className="bg-slate-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Destination</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Distance</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Drive Time</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">Rush Hour</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    <tr><td className="px-4 py-3">Las Vegas Strip</td><td className="px-4 py-3">12 miles</td><td className="px-4 py-3">18 min</td><td className="px-4 py-3">25-35 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">McCarran Airport (LAS)</td><td className="px-4 py-3">10 miles</td><td className="px-4 py-3">15 min</td><td className="px-4 py-3">20-30 min</td></tr>
+                    <tr><td className="px-4 py-3">Downtown Henderson</td><td className="px-4 py-3">8 miles</td><td className="px-4 py-3">12 min</td><td className="px-4 py-3">15-25 min</td></tr>
+                    <tr className="bg-slate-50"><td className="px-4 py-3">Green Valley</td><td className="px-4 py-3">5 miles</td><td className="px-4 py-3">10 min</td><td className="px-4 py-3">12-18 min</td></tr>
+                    <tr><td className="px-4 py-3">Lake Mead</td><td className="px-4 py-3">25 miles</td><td className="px-4 py-3">30 min</td><td className="px-4 py-3">35-40 min</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Amenities Detail */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Inspirada Amenity Centers</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-6">
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Resort Pool Complex</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li>• Resort-style pool with cabanas</li>
+                    <li>• Water slides and splash features</li>
+                    <li>• Zero-entry family pool</li>
+                    <li>• Lap lanes for fitness swimming</li>
+                    <li>• Poolside WiFi and refreshments</li>
+                    <li>• Extended summer hours</li>
+                  </ul>
+                </div>
+                <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+                  <h5 className="font-bold text-slate-900 mb-3">Active Living Amenities</h5>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li>• 10+ miles of walking/biking trails</li>
+                    <li>• Multiple neighborhood parks</li>
+                    <li>• Tennis and pickleball courts</li>
+                    <li>• Basketball courts</li>
+                    <li>• Dog parks</li>
+                    <li>• Community fitness classes</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Builders */}
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Builders in Inspirada</h3>
+              <div className="not-prose bg-white border border-slate-200 rounded-xl p-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Toll Brothers:</strong> Premium homes $600K-$750K. Known for quality and upgrades.</li>
+                    <li><strong>Beazer Homes:</strong> Mid-range to premium $500K-$650K. Energy-efficient designs.</li>
+                    <li><strong>Lennar:</strong> Entry to mid-range $450K-$580K. "Everything's Included" packages.</li>
+                  </ul>
+                  <ul className="text-slate-600 text-sm space-y-2">
+                    <li><strong>Woodside Homes:</strong> Mid-range $480K-$620K. Strong value proposition.</li>
+                    <li><strong>Richmond American:</strong> Entry to mid-range $450K-$550K. Personalization options.</li>
+                    <li><strong>Century Communities:</strong> Affordable entry $420K-$500K. Modern designs.</li>
+                  </ul>
+                </div>
+              </div>
+
               <p className="mt-8">
                 The current Inspirada market shows <strong>98 active listings</strong> with homes
                 averaging <strong>23 days on market</strong>—reflecting strong demand for this

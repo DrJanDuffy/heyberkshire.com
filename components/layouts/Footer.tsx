@@ -16,27 +16,33 @@ export default function Footer() {
               Summerlin. Backed by Warren Buffett's legacy of trust.
             </p>
             <div className="flex space-x-4">
-              <Link
-                href="#"
+              <a
+                href="http://drjanduffy.realscout.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
-                aria-label="Facebook"
+                aria-label="Search Las Vegas Homes"
               >
                 <Facebook className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
+              </a>
+              <a
+                href="http://drjanduffy.realscout.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
-                aria-label="Instagram"
+                aria-label="Search Las Vegas Homes"
               >
                 <Instagram className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
+              </a>
+              <a
+                href="http://drjanduffy.realscout.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Search Las Vegas Homes"
               >
                 <Linkedin className="h-5 w-5" />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -45,12 +51,14 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/listings"
+                <a
+                  href="http://drjanduffy.realscout.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-slate-300 hover:text-white transition-colors text-sm"
                 >
                   All Properties
-                </Link>
+                </a>
               </li>
               <li>
                 <Link
