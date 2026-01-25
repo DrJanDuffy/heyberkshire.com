@@ -81,6 +81,19 @@ export default function RootLayout({
       <head>
         {/* Site-wide JSON-LD Schema: RealEstateAgent + WebSite */}
         <SchemaScript schema={siteWideSchemas} id="site-schema" />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WB5DLLZ4C6"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WB5DLLZ4C6');
+          `}
+        </Script>
         {/* RealScout Widget Script - loaded once globally */}
         <Script
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
