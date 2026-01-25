@@ -180,10 +180,8 @@ const pageSchemas = combineSchemas(
 export default function FAQPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* Combined JSON-LD Schema: Breadcrumb + WebPage + FAQPage (all categories) */}
+      <SchemaScript schema={pageSchemas} id="faq-page-schema" />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">

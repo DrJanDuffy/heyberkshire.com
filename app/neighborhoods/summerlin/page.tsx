@@ -4,11 +4,7 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, MapPin, TreePine, Mountain, GraduationCap, ShoppingBag } from "lucide-react";
 import type { Metadata } from "next";
-import SchemaScript, {
-  BreadcrumbSchema,
-  FAQSchema,
-  NeighborhoodSchema,
-} from "@/components/SchemaScript";
+import SchemaScript from "@/components/SchemaScript";
 import {
   generateBreadcrumbSchema,
   generateFAQSchema,
