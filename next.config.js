@@ -26,7 +26,7 @@ const nextConfig = {
               "img-src 'self' data: blob: https: http:",
               "font-src 'self' data: https://assets.calendly.com",
               "connect-src 'self' https://em.realscout.com https://www.realscout.com https://openrouter.ai https://api.openai.com https://calendly.com",
-              "frame-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com",
+              "frame-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://assets.calendly.com",
               "worker-src 'self' blob:",
             ].join('; '),
           },
