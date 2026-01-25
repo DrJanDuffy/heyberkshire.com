@@ -7,6 +7,12 @@ import { GeistSans } from "geist/font/sans";
 import { cn } from "lib/utils";
 import AIChatWidget from "@/components/chat/AIChatWidget";
 import CalendlyBadge from "@/components/calendly/CalendlyBadge";
+import SchemaScript from "@/components/SchemaScript";
+import {
+  generateRealEstateAgentSchema,
+  generateWebSiteSchema,
+  combineSchemas,
+} from "@/lib/schema";
 
 const title = "Berkshire Hathaway HomeServices Las Vegas | Dr. Jan Duffy, REALTOR®";
 const description =
@@ -59,108 +65,11 @@ export const metadata: Metadata = {
   },
 };
 
-// LocalBusiness Schema for GBP optimization
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "@id": `${url}#organization`,
-  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  alternateName: ["HeyBerkshire", "BHHS Nevada Properties", "Berkshire Hathaway HomeServices"],
-  url,
-  logo: `${url}/favicon-32x32.png`,
-  image: `${url}/favicon-32x32.png`,
-  description:
-    "Dr. Jan Duffy is a licensed REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, Summerlin, and surrounding areas since 2008 with $127M+ in closed transactions.",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "9406 W Lake Mead Blvd, Suite 100",
-    addressLocality: "Las Vegas",
-    addressRegion: "NV",
-    postalCode: "89134",
-    addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "36.1893",
-    longitude: "-115.2821",
-  },
-  telephone: "+17025001942",
-  email: "jan@heyberkshire.com",
-  priceRange: "$$-$$$$",
-  areaServed: [
-    {
-      "@type": "City",
-      name: "Las Vegas",
-      sameAs: "https://en.wikipedia.org/wiki/Las_Vegas",
-    },
-    {
-      "@type": "City",
-      name: "Henderson",
-      sameAs: "https://en.wikipedia.org/wiki/Henderson,_Nevada",
-    },
-    {
-      "@type": "Place",
-      name: "Summerlin",
-    },
-    {
-      "@type": "Place",
-      name: "North Las Vegas",
-    },
-  ],
-  memberOf: {
-    "@type": "Organization",
-    name: "Berkshire Hathaway HomeServices",
-    url: "https://www.bhhs.com",
-  },
-  parentOrganization: {
-    "@type": "RealEstateAgent",
-    name: "Berkshire Hathaway HomeServices Nevada Properties",
-    url: "https://www.bfrre.com",
-  },
-  hasCredential: {
-    "@type": "EducationalOccupationalCredential",
-    credentialCategory: "Real Estate License",
-    recognizedBy: {
-      "@type": "Organization",
-      name: "Nevada Real Estate Division",
-    },
-    validIn: {
-      "@type": "State",
-      name: "Nevada",
-    },
-    credentialNumber: "S.0197614.LLC",
-  },
-  knowsAbout: [
-    "Las Vegas real estate",
-    "Henderson homes",
-    "Summerlin properties",
-    "Luxury homes",
-    "New construction",
-    "Investment properties",
-    "Relocation services",
-  ],
-  slogan: "Your Berkshire Hathaway HomeServices expert in Las Vegas",
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "18:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday", "Sunday"],
-      opens: "10:00",
-      closes: "16:00",
-    },
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "200",
-    bestRating: "5",
-  },
-};
+// Combined site-wide schemas using the schema utility
+const siteWideSchemas = combineSchemas(
+  generateRealEstateAgentSchema(),
+  generateWebSiteSchema()
+);
 
 export default function RootLayout({
   children,
@@ -170,10 +79,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth antialiased">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
+        {/* Site-wide JSON-LD Schema: RealEstateAgent + WebSite */}
+        <SchemaScript schema={siteWideSchemas} id="site-schema" />
         {/* RealScout Widget Script - loaded once globally */}
         <Script
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
