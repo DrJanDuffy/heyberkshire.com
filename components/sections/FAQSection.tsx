@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-interface FAQ {
+export interface FAQ {
   question: string;
   answer: string;
 }
 
-const faqs: FAQ[] = [
+// Default FAQs for the section
+export const defaultFaqs: FAQ[] = [
   {
     question: "What areas do you serve?",
     answer:
@@ -41,7 +42,23 @@ const faqs: FAQ[] = [
   },
 ];
 
-export default function FAQSection() {
+interface FAQSectionProps {
+  /** Custom FAQs to display (defaults to defaultFaqs) */
+  faqs?: FAQ[];
+  /** Custom title for the section */
+  title?: string;
+  /** Custom subtitle for the section */
+  subtitle?: string;
+  /** Whether to include JSON-LD schema (handled separately by FAQSchema component) */
+  className?: string;
+}
+
+export default function FAQSection({
+  faqs = defaultFaqs,
+  title = "Frequently Asked Questions",
+  subtitle = "Get answers to common questions about our real estate services",
+  className = "",
+}: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
@@ -49,15 +66,13 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className={`py-16 md:py-24 bg-white ${className}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Frequently Asked Questions
+            {title}
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Get answers to common questions about our real estate services
-          </p>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">{subtitle}</p>
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -88,4 +103,15 @@ export default function FAQSection() {
       </div>
     </section>
   );
+}
+
+/**
+ * Helper to generate FAQ schema data from FAQ array
+ * Use with FAQSchema component: <FAQSchema faqs={getFAQSchemaData(faqs)} />
+ */
+export function getFAQSchemaData(faqs: FAQ[]) {
+  return faqs.map((faq) => ({
+    question: faq.question,
+    answer: faq.answer,
+  }));
 }

@@ -4,6 +4,13 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import type { Metadata } from "next";
+import SchemaScript from "@/components/SchemaScript";
+import {
+  generateBreadcrumbSchema,
+  generateFAQSchema,
+  generateWebPageSchema,
+  combineSchemas,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "FAQ | Berkshire Hathaway HomeServices Las Vegas Real Estate",
@@ -18,37 +25,11 @@ export const metadata: Metadata = {
   ],
 };
 
-// FAQ Schema
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Why should I choose a Berkshire Hathaway HomeServices agent?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network of 50,000+ agents.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What areas does Berkshire Hathaway HomeServices Nevada Properties serve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "BHHS Nevada Properties serves all of Las Vegas, Henderson, North Las Vegas, Summerlin, Green Valley, Southern Highlands, Skye Canyon, and all surrounding Southern Nevada communities.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I contact Dr. Jan Duffy?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Call or text Dr. Jan Duffy at (702) 500-1942 or email jan@heyberkshire.com. Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
-      },
-    },
-  ],
-};
+// Breadcrumb items
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "FAQ", url: "/faq" },
+];
 
 const faqCategories = [
   {
@@ -174,6 +155,27 @@ const faqCategories = [
     ],
   },
 ];
+
+// Flatten all FAQs for schema generation
+const allFaqs = faqCategories.flatMap((category) =>
+  category.faqs.map((faq) => ({
+    question: faq.q,
+    answer: faq.a,
+  }))
+);
+
+// Combined page schemas including all FAQs
+const pageSchemas = combineSchemas(
+  generateBreadcrumbSchema(breadcrumbs),
+  generateWebPageSchema({
+    name: "Frequently Asked Questions | Berkshire Hathaway HomeServices Las Vegas",
+    description:
+      "Comprehensive FAQ about Las Vegas real estate, buying, selling, investing, and working with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties.",
+    url: "/faq",
+    dateModified: "2026-01-25",
+  }),
+  generateFAQSchema(allFaqs)
+);
 
 export default function FAQPage() {
   return (

@@ -4,6 +4,17 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import { Phone, MapPin, TreePine, Mountain, GraduationCap, ShoppingBag } from "lucide-react";
 import type { Metadata } from "next";
+import SchemaScript, {
+  BreadcrumbSchema,
+  FAQSchema,
+  NeighborhoodSchema,
+} from "@/components/SchemaScript";
+import {
+  generateBreadcrumbSchema,
+  generateFAQSchema,
+  generateNeighborhoodSchema,
+  combineSchemas,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Summerlin | Las Vegas Luxury Real Estate",
@@ -18,72 +29,57 @@ export const metadata: Metadata = {
   ],
 };
 
-const neighborhoodSchema = {
-  "@context": "https://schema.org",
-  "@type": "Place",
-  name: "Summerlin, Las Vegas",
-  description: "Premier master-planned community in Las Vegas with Red Rock Canyon views",
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "36.1672",
-    longitude: "-115.3310",
-  },
-  containedInPlace: {
-    "@type": "City",
-    name: "Las Vegas, Nevada",
-  },
-};
+// Breadcrumb items for this page
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Neighborhoods", url: "/neighborhoods" },
+  { name: "Summerlin", url: "/neighborhoods/summerlin" },
+];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the current median home price in Summerlin?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As of January 2026, the median home price in Summerlin is $625,000, representing a 6.8% increase year-over-year. Luxury homes in The Ridges and other guard-gated communities can exceed $2 million.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long do homes stay on the market in Summerlin?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Summerlin homes currently average 22 days on market, faster than the Las Vegas Valley average of 28 days. Well-priced homes in desirable villages often receive multiple offers within the first week.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What makes Summerlin different from other Las Vegas communities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Summerlin offers 150+ parks, 150+ miles of trails, top-rated schools, and stunning Red Rock Canyon views. The Howard Hughes Corporation has developed Summerlin with careful planning since 1990, creating distinct villages each with unique character.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why should I use a Berkshire Hathaway HomeServices agent in Summerlin?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Berkshire Hathaway HomeServices agents like Dr. Jan Duffy bring deep Summerlin expertise combined with the global resources and trusted reputation of the BHHS brand. This combination helps buyers compete in Summerlin's competitive market and helps sellers maximize their home's value.",
-      },
-    },
-  ],
-};
+// FAQ data for schema
+const summerlinFaqs = [
+  {
+    question: "What is the current median home price in Summerlin?",
+    answer:
+      "As of January 2026, the median home price in Summerlin is $625,000, representing a 6.8% increase year-over-year. Luxury homes in The Ridges and other guard-gated communities can exceed $2 million.",
+  },
+  {
+    question: "How long do homes stay on the market in Summerlin?",
+    answer:
+      "Summerlin homes currently average 22 days on market, faster than the Las Vegas Valley average of 28 days. Well-priced homes in desirable villages often receive multiple offers within the first week.",
+  },
+  {
+    question: "What makes Summerlin different from other Las Vegas communities?",
+    answer:
+      "Summerlin offers 150+ parks, 150+ miles of trails, top-rated schools, and stunning Red Rock Canyon views. The Howard Hughes Corporation has developed Summerlin with careful planning since 1990, creating distinct villages each with unique character.",
+  },
+  {
+    question: "Why should I use a Berkshire Hathaway HomeServices agent in Summerlin?",
+    answer:
+      "Berkshire Hathaway HomeServices agents like Dr. Jan Duffy bring deep Summerlin expertise combined with the global resources and trusted reputation of the BHHS brand. This combination helps buyers compete in Summerlin's competitive market and helps sellers maximize their home's value.",
+  },
+];
+
+// Combined page schemas
+const pageSchemas = combineSchemas(
+  generateBreadcrumbSchema(breadcrumbs),
+  generateNeighborhoodSchema({
+    name: "Summerlin",
+    slug: "summerlin",
+    description:
+      "Premier master-planned community in Las Vegas featuring Red Rock Canyon views, 150+ parks, top-rated schools, and luxury homes from $400K to $10M+.",
+    latitude: 36.1672,
+    longitude: -115.331,
+    containedIn: "Las Vegas",
+  }),
+  generateFAQSchema(summerlinFaqs)
+);
 
 export default function SummerlinPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(neighborhoodSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* Combined JSON-LD Schema: Breadcrumb + Place + FAQ */}
+      <SchemaScript schema={pageSchemas} id="summerlin-schema" />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
