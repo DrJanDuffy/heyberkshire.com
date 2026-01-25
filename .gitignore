@@ -1,43 +1,128 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# ===================
+# Dependencies
+# ===================
 /node_modules
 /.pnp
 .pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
 
-# testing
+# ===================
+# Testing
+# ===================
 /coverage
 /api/test.py
 /api/temp.txt
 /api/.env
+*.test.js.snap
 
-# next.js
+# ===================
+# Next.js
+# ===================
 /.next/
 /out/
+.next
 
-# production
+# ===================
+# Production Build
+# ===================
 /build
+/dist
+/.output
+/.vercel/output
 
-# misc
-.DS_Store
-*.pem
+# ===================
+# Environment Files
+# ===================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# ===================
+# IDE & Editor
+# ===================
 .idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+*~
 
-# debug
+# ===================
+# OS Generated
+# ===================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===================
+# Debug & Logs
+# ===================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log
+*.log
+logs/
 
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
+# ===================
+# TypeScript
+# ===================
 *.tsbuildinfo
 next-env.d.ts
-__pycache__
+tsconfig.tsbuildinfo
 
-# cloned template
+# ===================
+# Python
+# ===================
+__pycache__
+*.py[cod]
+*$py.class
+.Python
+venv/
+ENV/
+
+# ===================
+# Vercel
+# ===================
+.vercel
+
+# ===================
+# Security
+# ===================
+*.pem
+*.key
+*.cert
+*.p12
+secrets.json
+credentials.json
+
+# ===================
+# Misc
+# ===================
 /real-estate-template
+*.bak
+*.tmp
+*.temp
+
+# ===================
+# Large Media (use Git LFS if needed)
+# ===================
+# Uncomment if you want to ignore large files
+# *.mp4
+# *.mov
+# *.avi
