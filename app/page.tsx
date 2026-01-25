@@ -70,7 +70,7 @@ const faqSchema = {
       name: "How do I contact Dr. Jan Duffy at Berkshire Hathaway HomeServices?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can reach Dr. Jan Duffy at (702) 500-1942 or email jan@heyberkshire.com. Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+        text: "You can reach Dr. Jan Duffy at (702) 500-1942 or email homes@heyberkshire.com. Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
       },
     },
     {
