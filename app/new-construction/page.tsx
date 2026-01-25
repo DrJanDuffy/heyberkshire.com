@@ -56,10 +56,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do I have to register with my agent on the first visit?",
+      name: "Do I have to register Dr. Jan Duffy as my agent on the first visit?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, most builders require your agent to accompany you or be registered on your FIRST visit. If you visit alone and sign the guest registry, you may forfeit your right to representation. Always contact Dr. Jan Duffy before visiting any model home.",
+        text: "Yes, most builders require your agent to accompany you or be registered on your FIRST visit. If you visit alone and sign the guest registry, you may forfeit your right to free representation. Call (702) 500-1942 to register Dr. Jan Duffy as your buyer's agent before visiting any model home.",
       },
     },
     {
@@ -266,12 +266,13 @@ export default function NewConstructionPage() {
                 <AlertTriangle className="h-6 w-6 text-amber-600 mr-3 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-amber-900 mb-1">
-                    Important: Register Your Agent FIRST
+                    Important: Register Dr. Jan Duffy as Your Agent FIRST
                   </h3>
                   <p className="text-amber-800 text-sm">
                     Most builders require agent registration on your <strong>first visit</strong>.
-                    Contact Dr. Jan Duffy before visiting any model home to ensure you receive free
-                    professional representation.
+                    Call <a href="tel:+17025001942" className="font-bold underline">(702) 500-1942</a> to 
+                    register Dr. Jan Duffy as your buyer's agent before visiting any model home—or you 
+                    may lose your right to free professional representation.
                   </p>
                 </div>
               </div>
@@ -459,11 +460,15 @@ export default function NewConstructionPage() {
                 </div>
                 <div className="bg-white border border-slate-200 rounded-xl p-6 flex-grow">
                   <h3 className="font-bold text-slate-900 mb-2">
-                    Contact Dr. Jan BEFORE Visiting Model Homes
+                    Register Dr. Jan Duffy as Your Agent BEFORE Visiting
                   </h3>
                   <p className="text-slate-600">
-                    Register with your BHHS agent before any builder visits. We'll discuss your
-                    needs, budget, and preferred locations, then accompany you to model homes.
+                    Call{" "}
+                    <a href="tel:+17025001942" className="text-blue-600 font-semibold hover:underline">
+                      (702) 500-1942
+                    </a>{" "}
+                    to register Dr. Jan Duffy as your buyer's agent before any builder visits. We'll 
+                    discuss your needs, budget, and preferred locations, then accompany you to model homes.
                   </p>
                 </div>
               </div>
@@ -577,13 +582,16 @@ export default function NewConstructionPage() {
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2 flex items-center">
                   <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
-                  Do I have to register with my agent on the first visit?
+                  Do I have to register Dr. Jan Duffy as my agent on the first visit?
                 </h3>
                 <p className="text-slate-600">
                   Yes, most builders require your agent to accompany you or be registered on your
                   FIRST visit. If you visit alone and sign the guest registry, you may forfeit your
-                  right to representation. Always contact Dr. Jan Duffy before visiting any model
-                  home.
+                  right to free representation. Call{" "}
+                  <a href="tel:+17025001942" className="text-blue-600 font-semibold hover:underline">
+                    (702) 500-1942
+                  </a>{" "}
+                  to register Dr. Jan Duffy as your buyer's agent before visiting any model home.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -657,8 +665,9 @@ export default function NewConstructionPage() {
               Ready to Tour New Construction?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy <strong>before</strong> visiting any model home to ensure you
-              receive free professional representation. Current incentive information available.
+              Call <strong>(702) 500-1942</strong> to register Dr. Jan Duffy as your buyer's agent 
+              <strong> before</strong> visiting any model home—or you may lose your right to free 
+              professional representation. Current incentive information available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
