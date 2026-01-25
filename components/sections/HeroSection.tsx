@@ -2,9 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 export default function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -56,19 +53,13 @@ export default function HeroSection() {
           selling, and investing in Southern Nevada.
         </p>
 
-        {/* Search Bar */}
-        <div className="w-full max-w-2xl">
-          <form className="flex flex-col sm:flex-row gap-2 bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-xl">
-            <Input
-              type="text"
-              placeholder="Enter city, ZIP code, or neighborhood"
-              className="flex-1 border-0 focus-ring-0 text-base"
-            />
-            <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
-              <Search className="h-4 w-4 mr-2" />
-              Search Properties
-            </Button>
-          </form>
+        {/* RealScout Search Widget */}
+        <div className="realscout-wrapper mb-4">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<realscout-simple-search agent-encoded-id="QWdlbnQtMjI1MDUw"></realscout-simple-search>`,
+            }}
+          />
         </div>
 
         {/* Trust Indicators */}

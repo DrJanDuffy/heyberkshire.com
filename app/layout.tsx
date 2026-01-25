@@ -178,17 +178,7 @@ export default function RootLayout({
         <Script
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
           type="module"
-          strategy="afterInteractive"
-        />
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-              realscout-office-listings {
-                --rs-listing-divider-color: #0e64c8;
-                width: 100%;
-              }
-            `,
-          }}
+          strategy="beforeInteractive"
         />
       </head>
       <body
