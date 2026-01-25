@@ -13,7 +13,7 @@ interface CalendlyBadgeProps {
 }
 
 export default function CalendlyBadge({
-  url = "https://calendly.com/drjanduffy/appointment",
+  url = "https://calendly.com/drjanduffy/showing",
   text = "Schedule time with me",
   color = "#0069ff",
   textColor = "#ffffff",

@@ -9,7 +9,7 @@ interface CalendlyWidgetProps {
 }
 
 export default function CalendlyWidget({
-  url = "https://calendly.com/drjanduffy/appointment",
+  url = "https://calendly.com/drjanduffy/showing",
   minWidth = "320px",
   height = "700px",
 }: CalendlyWidgetProps) {
