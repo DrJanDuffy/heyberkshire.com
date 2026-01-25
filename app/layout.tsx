@@ -103,7 +103,7 @@ export default function RootLayout({
         {/* Calendly Widget Script - loaded once globally */}
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
       </head>
       <body
