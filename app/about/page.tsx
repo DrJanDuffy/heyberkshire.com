@@ -108,7 +108,7 @@ export default function AboutPage() {
                       className="flex items-center text-slate-700 hover:text-blue-600"
                     >
                       <Phone className="h-5 w-5 mr-3 text-blue-600" />
-                      (702) 500-1942
+                      (702) 222-1964
                     </a>
                     <a
                       href="mailto:jan@heyberkshire.com"
@@ -268,7 +268,7 @@ export default function AboutPage() {
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties

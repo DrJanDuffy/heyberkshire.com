@@ -15,9 +15,14 @@ export const agentInfo = {
   name: "Dr. Jan Duffy",
   title: "REALTOR®",
   license: "S.0197614.LLC",
-  phone: "(702) 500-1942",
-  phoneFormatted: "(702) 500-1942",
-  phoneTel: "tel:+17022221964",
+  // Professional/Header phone
+  phone: "(702) 500-1955",
+  phoneFormatted: "(702) 500-1955",
+  phoneTel: "tel:+17025001955",
+  // Marketing/CTA phone
+  phoneCTA: "(702) 222-1964",
+  phoneCTAFormatted: "(702) 222-1964",
+  phoneCTATel: "tel:+17022221964",
   email: "jan@heyberkshire.com",
   brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
 };
@@ -35,8 +40,10 @@ export const officeInfo = {
     lat: 36.1893,
     lng: -115.2821,
   },
-  phone: "(702) 500-1942",
-  phoneTel: "tel:+17022221964",
+  phone: "(702) 500-1955",
+  phoneTel: "tel:+17025001955",
+  phoneCTA: "(702) 222-1964",
+  phoneCTATel: "tel:+17022221964",
 };
 
 // Market Statistics (Updated January 2026)
