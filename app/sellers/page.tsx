@@ -17,7 +17,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
   description:
-    "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing. Call (702) 222-1964.",
+    "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing. Call (702) 500-1942.",
   keywords: [
     "sell home Las Vegas",
     "Las Vegas listing agent",
@@ -290,11 +290,11 @@ export default function SellersPage() {
               could sell for with Berkshire Hathaway HomeServices.
             </p>
             <a
-              href="tel:+17022221964"
+              href="tel:+17025001942"
               className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 222-1964
+              Call (702) 500-1942
             </a>
             <p className="mt-4 text-slate-400 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties

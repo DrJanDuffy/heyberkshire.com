@@ -29,7 +29,7 @@ import {
 export const metadata: Metadata = {
   title: "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Dr. Jan Duffy is a trusted Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 222-1964.",
+    "Dr. Jan Duffy is a trusted Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 500-1942.",
   keywords: [
     "Dr. Jan Duffy realtor",
     "Las Vegas real estate agent",
@@ -90,8 +90,8 @@ export default function GoogleBusinessPage() {
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="h-5 w-5 text-blue-400 flex-shrink-0" />
-                      <a href={`tel:${businessInfo.phone.ctaTel}`} className="font-medium hover:text-blue-300">
-                        {businessInfo.phone.cta}
+                      <a href={`tel:${businessInfo.phone.tel}`} className="font-medium hover:text-blue-300">
+                        {businessInfo.phone.display}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
@@ -113,10 +113,10 @@ export default function GoogleBusinessPage() {
                   <p className="text-3xl font-bold mb-2">4.9 / 5.0</p>
                   <p className="text-blue-200 mb-6">200+ Client Reviews</p>
                   <a
-                    href={`tel:${businessInfo.phone.ctaTel}`}
+                    href={`tel:${businessInfo.phone.tel}`}
                     className="inline-block w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-lg font-bold text-lg transition-colors"
                   >
-                    Call Now: {businessInfo.phone.cta}
+                    Call Now: {businessInfo.phone.display}
                   </a>
                   <p className="text-sm text-blue-300 mt-3">Free Consultation</p>
                 </div>
@@ -288,11 +288,11 @@ export default function GoogleBusinessPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href={`tel:${businessInfo.phone.ctaTel}`}
+                  href={`tel:${businessInfo.phone.tel}`}
                   className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
-                  {businessInfo.phone.cta}
+                  {businessInfo.phone.display}
                 </a>
                 <Link
                   href="/contact"

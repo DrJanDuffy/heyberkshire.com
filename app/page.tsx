@@ -13,7 +13,7 @@ import { Home as HomeIcon, TrendingUp, Shield, Users, Phone } from "lucide-react
 export const metadata: Metadata = {
   title: "Berkshire Hathaway HomeServices Las Vegas | Dr. Jan Duffy, REALTOR®",
   description:
-    "Looking for a Berkshire Hathaway HomeServices agent in Las Vegas? Dr. Jan Duffy with BHHS Nevada Properties offers expert real estate services—backed by Warren Buffett's legacy of trust. Call (702) 222-1964.",
+    "Looking for a Berkshire Hathaway HomeServices agent in Las Vegas? Dr. Jan Duffy with BHHS Nevada Properties offers expert real estate services—backed by Warren Buffett's legacy of trust. Call (702) 500-1942.",
   keywords: [
     "Berkshire Hathaway HomeServices",
     "Berkshire Hathaway HomeServices Nevada Properties",
@@ -29,7 +29,7 @@ const organizationSchema = {
   "@type": "RealEstateAgent",
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   url: "https://heyberkshire.com",
-  telephone: "+17022221964",
+  telephone: "+17025001942",
   address: {
     "@type": "PostalAddress",
     streetAddress: "9406 W Lake Mead Blvd, Suite 100",
@@ -70,7 +70,7 @@ const faqSchema = {
       name: "How do I contact Dr. Jan Duffy at Berkshire Hathaway HomeServices?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can reach Dr. Jan Duffy at (702) 222-1964 or email jan@heyberkshire.com. Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+        text: "You can reach Dr. Jan Duffy at (702) 500-1942 or email jan@heyberkshire.com. Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
       },
     },
     {
@@ -280,11 +280,11 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17022221964"
+                href="tel:+17025001942"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
+                Call (702) 500-1942
               </a>
               <Link
                 href="/contact"
