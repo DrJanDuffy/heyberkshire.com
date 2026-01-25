@@ -82,7 +82,7 @@ const services = [
     title: "Home Valuation",
     slug: "home-valuation",
     description:
-      "Free, no-obligation home valuations using current market data and 15+ years of Las Vegas expertise.",
+      "Free, no-obligation home valuations using current market data and expertise serving Las Vegas since 2008.",
     highlights: ["Accurate pricing", "No obligation", "Detailed analysis"],
   },
   {

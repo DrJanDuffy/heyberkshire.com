@@ -195,13 +195,13 @@ export default function WhyBerkshireHathawayPage() {
                 </h2>
                 <p className="text-lg text-slate-700 mb-6">
                   Dr. Jan Duffy brings the power of <strong>Berkshire Hathaway HomeServices</strong>{" "}
-                  to Las Vegas, Henderson, Summerlin, and all of Southern Nevada. With 15+ years of
-                  local experience and $127M+ in closed transactions, you get global brand strength
+                  to Las Vegas, Henderson, Summerlin, and all of Southern Nevada. Serving the area 
+                  since 2008 with $127M+ in closed transactions, you get global brand strength
                   with hometown expertise.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "15+ years Las Vegas real estate experience",
+                    "Serving Las Vegas since 2008",
                     "$127M+ in closed transactions",
                     "500+ satisfied clients",
                     "Specializing in luxury, investment, and relocation",

@@ -70,7 +70,7 @@ const localBusinessSchema = {
   logo: `${url}/favicon-32x32.png`,
   image: `${url}/favicon-32x32.png`,
   description:
-    "Dr. Jan Duffy is a licensed REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, Summerlin, and surrounding areas with 15+ years of experience and $127M+ in closed transactions.",
+    "Dr. Jan Duffy is a licensed REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, Summerlin, and surrounding areas since 2008 with $127M+ in closed transactions.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "9406 W Lake Mead Blvd, Suite 100",

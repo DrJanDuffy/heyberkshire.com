@@ -4,7 +4,7 @@ const features = [
   {
     icon: Shield,
     title: "Trusted Expertise",
-    description: "15+ years of experience in Las Vegas and Henderson real estate markets.",
+    description: "Serving Las Vegas and Henderson since 2008 with proven results.",
   },
   {
     icon: TrendingUp,

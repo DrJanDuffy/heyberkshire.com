@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
   description:
-    "Meet Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent. 15+ years experience, $127M+ in transactions, serving Las Vegas, Henderson & Summerlin.",
+    "Meet Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent. Serving Las Vegas since 2008, $127M+ in transactions, Henderson & Summerlin specialist.",
   keywords: [
     "Dr. Jan Duffy",
     "Berkshire Hathaway HomeServices agent",
@@ -24,7 +24,7 @@ const personSchema = {
   name: "Dr. Jan Duffy",
   jobTitle: "REALTOR®",
   description:
-    "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin with 15+ years of experience.",
+    "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008.",
   telephone: "+17025001942",
   email: "jan@heyberkshire.com",
   url: "https://heyberkshire.com/about",
@@ -62,8 +62,8 @@ export default function AboutPage() {
               Meet Your Berkshire Hathaway HomeServices Agent
             </h1>
             <p className="text-xl text-slate-600">
-              Dr. Jan Duffy brings 15+ years of Las Vegas real estate expertise—backed by the most
-              trusted name in the business
+              Dr. Jan Duffy has been serving Las Vegas since 2008—backed by the most
+              trusted name in real estate
             </p>
           </div>
 
@@ -86,7 +86,7 @@ export default function AboutPage() {
                     represent this iconic brand in the Las Vegas real estate market.
                   </p>
                   <p>
-                    With over 15 years of experience and $127 million in closed transactions, I've
+                    Since 2008, I've closed $127 million in transactions and
                     helped hundreds of families find their perfect home in Las Vegas, Henderson,
                     Summerlin, and throughout Southern Nevada. My expertise spans luxury properties,
                     new construction, investment real estate, and relocations.
@@ -145,8 +145,8 @@ export default function AboutPage() {
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">15+</div>
-                    <div className="text-sm text-slate-600">Years Experience</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1">Since 2008</div>
+                    <div className="text-sm text-slate-600">Serving Las Vegas</div>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">$127M+</div>

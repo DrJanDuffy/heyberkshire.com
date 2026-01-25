@@ -44,7 +44,7 @@ const sellingBenefits = [
     icon: BarChart,
     title: "Pricing Expertise",
     description:
-      "Dr. Jan's 15+ years of local experience means accurate pricing that attracts buyers without leaving money on the table. Overpriced homes sit; well-priced homes sell.",
+      "Dr. Jan has been serving Las Vegas since 2008, which means accurate pricing that attracts buyers without leaving money on the table. Overpriced homes sit; well-priced homes sell.",
   },
   {
     icon: DollarSign,
@@ -190,8 +190,8 @@ export default function SellersPage() {
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Pricing your home correctly from day one is the single most important factor in
                 getting top dollar. Overpriced homes sit, and every day on market costs you money.
-                That's why I use comprehensive market analysis and 15+ years of Las Vegas
-                experience to price homes right the first time."
+                That's why I use comprehensive market analysis and my experience serving Las Vegas
+                since 2008 to price homes right the first time."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties
@@ -232,8 +232,8 @@ export default function SellersPage() {
                 <h2 className="text-3xl font-bold mb-4">What's Your Home Worth?</h2>
                 <p className="text-blue-100 mb-6">
                   Get a free, no-obligation home valuation from Dr. Jan Duffy. Using current MLS
-                  data and 15+ years of local expertise, you'll know exactly what your home could
-                  sell for in today's market.
+                  data and experience serving Las Vegas since 2008, you'll know exactly what your 
+                  home could sell for in today's market.
                 </p>
                 <Link
                   href="/home-valuation"

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    description: "Trusted Las Vegas REALTOR® with 15+ years experience. Summerlin, Henderson, luxury homes, 55+ communities.",
+    description: "Trusted Las Vegas REALTOR® serving since 2008. Summerlin, Henderson, luxury homes, 55+ communities.",
     url: "https://heyberkshire.com/google-business",
     type: "profile",
   },

@@ -27,7 +27,7 @@ const faqs: FAQ[] = [
   {
     question: "What makes you different from other real estate agents?",
     answer:
-      "With 15+ years of experience and 500+ successful transactions, we combine deep local market knowledge with personalized service. As part of Berkshire Hathaway HomeServices, we have access to extensive resources and technology to serve you better.",
+      "Serving Las Vegas since 2008 with 500+ successful transactions, we combine deep local market knowledge with personalized service. As part of Berkshire Hathaway HomeServices, we have access to extensive resources and technology to serve you better.",
   },
   {
     question: "Can you help with investment properties?",

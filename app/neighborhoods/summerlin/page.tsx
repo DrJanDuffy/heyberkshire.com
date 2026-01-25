@@ -203,9 +203,9 @@ export default function SummerlinPage() {
               <p>
                 Working with a <strong>Berkshire Hathaway HomeServices</strong> agent gives you access to listings
                 before they hit the market, expert negotiation skills, and the backing of a globally trusted brand.
-                Dr. Jan Duffy's 15+ years of Summerlin experience means you'll have insights that online searches
-                simply can't provide—from which streets have the best mountain views to which builders offer the
-                best construction quality.
+                Dr. Jan Duffy has been serving Summerlin since 2008, which means you'll have insights that online 
+                searches simply can't provide—from which streets have the best mountain views to which builders 
+                offer the best construction quality.
               </p>
             </div>
           </section>
@@ -214,8 +214,8 @@ export default function SummerlinPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Summerlin isn't just a neighborhood—it's a lifestyle. I've lived and worked here for over
-                15 years, and I can tell you exactly which villages suit young families, which offer the
+                "Summerlin isn't just a neighborhood—it's a lifestyle. I've been serving this area since
+                2008, and I can tell you exactly which villages suit young families, which offer the
                 best investment potential, and where you'll find the hidden gems. That local knowledge is
                 what sets Berkshire Hathaway HomeServices apart."
               </blockquote>
