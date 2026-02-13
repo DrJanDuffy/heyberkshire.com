@@ -80,25 +80,39 @@ export default function Navbar() {
             {/* Services Dropdown */}
             <div className="relative">
               <button
-                className="flex items-center text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm"
+                className="flex items-center text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded-md px-2 py-1"
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
                 onMouseEnter={() => setIsServicesOpen(true)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setIsServicesOpen(!isServicesOpen);
+                  } else if (e.key === 'Escape') {
+                    setIsServicesOpen(false);
+                  }
+                }}
+                aria-expanded={isServicesOpen}
+                aria-haspopup="true"
+                aria-label="Services menu"
               >
                 Services
-                <ChevronDown className="h-4 w-4 ml-1" />
+                <ChevronDown className="h-4 w-4 ml-1" aria-hidden="true" />
               </button>
 
               {isServicesOpen && (
                 <div
                   className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
                   onMouseLeave={() => setIsServicesOpen(false)}
+                  role="menu"
+                  aria-orientation="vertical"
                 >
                   {serviceLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600"
+                      className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 focus-visible:outline-none focus-visible:bg-blue-50 focus-visible:text-blue-600"
                       onClick={() => setIsServicesOpen(false)}
+                      role="menuitem"
                     >
                       {link.label}
                     </Link>
@@ -124,11 +138,12 @@ export default function Navbar() {
               </Link>
             </Button>
             <button
-              className="text-slate-700 focus:outline-none"
+              className="text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded-md p-1"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
             </button>
           </div>
         </div>

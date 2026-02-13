@@ -12,7 +12,14 @@
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
-    "validate": "npm run type-check && npm run lint && npm run format:check"
+    "validate": "npm run type-check && npm run lint && npm run format:check",
+    "analyze": "ANALYZE=true npm run build",
+    "lighthouse": "lhci autorun",
+    "lighthouse:manual": "lighthouse https://heyberkshire.com --view --preset=desktop",
+    "perf": "npm run analyze && npm run lighthouse",
+    "vercel:build": "vercel build",
+    "vercel:deploy": "vercel deploy --prebuilt",
+    "vercel:prod": "vercel deploy --prod --prebuilt"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -32,6 +39,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.13.0",
     "@types/node": "20.11.24",
     "@types/react": "18.2.63",
     "@types/react-dom": "18.2.20",
@@ -45,6 +53,7 @@
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "3.4.1",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "5.4.2"
+    "typescript": "5.4.2",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }
