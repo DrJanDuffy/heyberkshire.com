@@ -11,6 +11,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { FollowUpBossClient } from '@/lib/fub/client';
+import { leadFormLimiter, getClientId, checkRateLimit, getRateLimitHeaders } from '@/lib/rate-limit';
 
 export interface LeadCaptureRequest {
   // Required
@@ -77,6 +78,26 @@ async function verifyTurnstileToken(token: string): Promise<boolean> {
 export async function POST(request: NextRequest) {
   try {
     const data: LeadCaptureRequest = await request.json();
+
+    // Check rate limit (5 submissions per hour per IP)
+    const clientId = getClientId(request);
+    const rateLimit = await checkRateLimit(leadFormLimiter, clientId);
+    
+    if (!rateLimit.success) {
+      const resetDate = new Date(rateLimit.reset);
+      const minutesUntilReset = Math.ceil((rateLimit.reset - Date.now()) / 60000);
+      
+      return NextResponse.json(
+        { 
+          error: `Too many submissions. Please try again in ${minutesUntilReset} minute${minutesUntilReset > 1 ? 's' : ''}.`,
+          retryAfter: resetDate.toISOString(),
+        },
+        { 
+          status: 429,
+          headers: getRateLimitHeaders(rateLimit),
+        }
+      );
+    }
 
     // Verify Turnstile CAPTCHA (if configured)
     if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && process.env.TURNSTILE_SECRET_KEY) {
@@ -199,14 +220,19 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    return NextResponse.json({
-      success: true,
-      personId: person.id,
-      isNew: !existingPerson,
-      message: existingPerson 
-        ? 'Lead updated successfully' 
-        : 'Lead created successfully',
-    });
+    return NextResponse.json(
+      {
+        success: true,
+        personId: person.id,
+        isNew: !existingPerson,
+        message: existingPerson 
+          ? 'Lead updated successfully' 
+          : 'Lead created successfully',
+      },
+      {
+        headers: getRateLimitHeaders(rateLimit),
+      }
+    );
 
   } catch (error) {
     console.error('[Lead Capture] Error:', error);
