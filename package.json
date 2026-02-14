@@ -27,10 +27,7 @@
     "vercel:deploy": "vercel deploy --prebuilt",
     "vercel:prod": "vercel deploy --prod --prebuilt",
     "cloudflare:dev": "wrangler dev",
-    "cloudflare:deploy": "wrangler deploy",
-    "cloudflare:pages": "npx @cloudflare/next-on-pages",
-    "cloudflare:build": "npm run cloudflare:pages",
-    "build:cloudflare": "npx @cloudflare/next-on-pages"
+    "cloudflare:deploy": "wrangler deploy"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.0",
@@ -56,7 +53,6 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.2",
     "@cloudflare/workers-types": "^4.20240806.0",
     "@lhci/cli": "^0.13.0",
     "@testing-library/jest-dom": "^6.9.1",
