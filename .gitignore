@@ -112,6 +112,12 @@ secrets.json
 credentials.json
 
 # ===================
+# Sentry
+# ===================
+.sentryclirc
+.sentry-*
+
+# ===================
 # Misc
 # ===================
 /real-estate-template

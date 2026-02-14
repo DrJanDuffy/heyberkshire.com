@@ -88,6 +88,92 @@ jobs:
         run: npx prettier --check "**/*.{ts,tsx,js,jsx,json,md,css}"
 
   # ============================================
+  # Test Suite
+  # ============================================
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test:ci
+
+      - name: Generate coverage report
+        if: always()
+        run: npm run test:coverage
+
+      - name: Upload coverage to artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 7
+
+      - name: Comment test results
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            let body = '## 🧪 Test Results\n\n';
+            
+            try {
+              // Read coverage summary if available
+              const coveragePath = 'coverage/coverage-summary.json';
+              if (fs.existsSync(coveragePath)) {
+                const coverage = JSON.parse(fs.readFileSync(coveragePath, 'utf8'));
+                const total = coverage.total;
+                
+                body += '### Coverage Summary\n\n';
+                body += '| Metric | Coverage |\n';
+                body += '|--------|----------|\n';
+                body += `| Statements | ${total.statements.pct}% |\n`;
+                body += `| Branches | ${total.branches.pct}% |\n`;
+                body += `| Functions | ${total.functions.pct}% |\n`;
+                body += `| Lines | ${total.lines.pct}% |\n\n`;
+                
+                if (total.statements.pct < 80) {
+                  body += '⚠️ **Warning**: Coverage is below 80% target.\n\n';
+                } else {
+                  body += '✅ **Great!** Coverage meets 80% target.\n\n';
+                }
+              }
+              
+              body += '📊 [View full coverage report in artifacts](../actions/runs/${{ github.run_id }})\n';
+              
+            } catch (e) {
+              body += '⚠️ Could not read coverage report.\n';
+            }
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body
+            });
+
+  # ============================================
   # Security Audit
   # ============================================
   security:
@@ -359,7 +445,7 @@ jobs:
   summary:
     name: Review Summary
     runs-on: ubuntu-latest
-    needs: [build, lint, security]
+    needs: [build, lint, test, security]
     if: always()
     steps:
       - name: Post summary
@@ -368,6 +454,7 @@ jobs:
           script: |
             const buildResult = '${{ needs.build.result }}';
             const lintResult = '${{ needs.lint.result }}';
+            const testResult = '${{ needs.test.result }}';
             const securityResult = '${{ needs.security.result }}';
             
             const getEmoji = (result) => {
@@ -384,16 +471,18 @@ jobs:
             |-------|--------|
             | Build & Type Check | ${getEmoji(buildResult)} ${buildResult} |
             | Lint & Format | ${getEmoji(lintResult)} ${lintResult} |
+            | Test Suite | ${getEmoji(testResult)} ${testResult} |
             | Security Audit | ${getEmoji(securityResult)} ${securityResult} |
             
             ---
             
-            ${buildResult === 'failure' || lintResult === 'failure' ? '⚠️ **Action required**: Please fix the failing checks before merging.' : '🎉 All automated checks passed!'}
+            ${buildResult === 'failure' || lintResult === 'failure' || testResult === 'failure' ? '⚠️ **Action required**: Please fix the failing checks before merging.' : '🎉 All automated checks passed!'}
             
             <details>
             <summary>📋 Review Checklist</summary>
             
             - [ ] Code follows project conventions
+            - [ ] Tests pass with adequate coverage (80%+)
             - [ ] SEO metadata is present and optimized
             - [ ] Phone numbers are correct: (702) 500-1942
             - [ ] Berkshire Hathaway branding is consistent
