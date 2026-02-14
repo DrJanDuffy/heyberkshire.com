@@ -12,6 +12,7 @@
 'use client';
 
 import { useState } from 'react';
+import Turnstile from '@marsidev/react-turnstile';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -35,6 +36,7 @@ export function LeadCaptureForm({
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string>('');
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -81,6 +83,7 @@ export function LeadCaptureForm({
           source,
           stage,
           tags: defaultTags,
+          turnstileToken, // CAPTCHA verification
         }),
       });
 
@@ -104,6 +107,7 @@ export function LeadCaptureForm({
         timeline: '',
         preApproved: false,
       });
+      setTurnstileToken(''); // Reset CAPTCHA
 
       if (onSuccess) onSuccess();
     } catch (err) {
@@ -334,9 +338,25 @@ export function LeadCaptureForm({
         />
       </div>
 
+      {/* Cloudflare Turnstile CAPTCHA */}
+      {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && (
+        <div className="flex justify-center">
+          <Turnstile
+            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+            onSuccess={setTurnstileToken}
+            onError={() => setError('CAPTCHA verification failed. Please refresh and try again.')}
+            onExpire={() => setTurnstileToken('')}
+            options={{
+              theme: 'light',
+              size: 'normal',
+            }}
+          />
+        </div>
+      )}
+
       <Button
         type="submit"
-        disabled={loading}
+        disabled={loading || (!turnstileToken && !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY)}
         className="w-full"
       >
         {loading ? 'Submitting...' : 'Submit'}

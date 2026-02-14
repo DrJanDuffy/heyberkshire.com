@@ -39,13 +39,62 @@ export interface LeadCaptureRequest {
   financing?: string;
   preApproved?: boolean;
   
+  // Security
+  turnstileToken?: string;
+  
   // Custom fields
   customFields?: Record<string, any>;
+}
+
+// Verify Cloudflare Turnstile token
+async function verifyTurnstileToken(token: string): Promise<boolean> {
+  if (!process.env.TURNSTILE_SECRET_KEY) {
+    console.warn('TURNSTILE_SECRET_KEY not configured - skipping verification');
+    return true; // Allow in development
+  }
+
+  try {
+    const response = await fetch(
+      'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          secret: process.env.TURNSTILE_SECRET_KEY,
+          response: token,
+        }),
+      }
+    );
+
+    const data = await response.json();
+    return data.success === true;
+  } catch (error) {
+    console.error('Turnstile verification error:', error);
+    return false;
+  }
 }
 
 export async function POST(request: NextRequest) {
   try {
     const data: LeadCaptureRequest = await request.json();
+
+    // Verify Turnstile CAPTCHA (if configured)
+    if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && process.env.TURNSTILE_SECRET_KEY) {
+      if (!data.turnstileToken) {
+        return NextResponse.json(
+          { error: 'CAPTCHA verification required' },
+          { status: 400 }
+        );
+      }
+
+      const isValid = await verifyTurnstileToken(data.turnstileToken);
+      if (!isValid) {
+        return NextResponse.json(
+          { error: 'CAPTCHA verification failed. Please try again.' },
+          { status: 403 }
+        );
+      }
+    }
 
     // Validate required fields
     if (!data.email && !data.phone) {
