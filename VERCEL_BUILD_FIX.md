@@ -26,7 +26,7 @@ npm error Conflicting peer dependency: next@15.4.11
 
 ## ✅ The Solution
 
-**3 changes made** to the Dependabot branch:
+**4 changes made** to the Dependabot branch:
 
 ### 1. Removed Deprecated Package
 ```json
@@ -50,7 +50,21 @@ npm error Conflicting peer dependency: next@15.4.11
 
 **Why**: Must match Next.js major version
 
-### 3. Removed Cloudflare Pages Scripts
+### 3. Upgraded Geist Font
+```json
+// BEFORE:
+"geist": "^1.2.2"
+
+// AFTER:
+"geist": "^1.7.0"
+```
+
+**Why**: 
+- geist 1.2.2 only supported Next.js <15
+- geist 1.7.0 supports Next.js >=13.2.0 (includes 16)
+- Second peer dependency conflict discovered
+
+### 4. Removed Cloudflare Pages Scripts
 ```json
 // REMOVED from scripts:
 "cloudflare:pages": "npx @cloudflare/next-on-pages",
@@ -113,7 +127,11 @@ git push origin main
 3. **Vercel build triggered**: CI ran `npm ci` on the branch
 4. **Build failed**: Peer dependency conflict with `@cloudflare/next-on-pages`
 5. **Feb 14, 2026**: You reported the error
-6. **Fix applied**: Removed incompatible package, build now works
+6. **Fix #1 applied**: Removed `@cloudflare/next-on-pages`
+7. **Build still failed**: Second conflict discovered with `geist` font
+8. **Fix #2 applied**: Upgraded `geist` to 1.7.0
+9. **Regenerated**: package-lock.json with all fixes
+10. **Build now works**: All peer dependency conflicts resolved ✅
 
 ### Why `@cloudflare/next-on-pages` Exists
 
