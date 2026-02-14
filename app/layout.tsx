@@ -77,8 +77,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth antialiased">
+    <html lang="en" className="scroll-smooth antialiased" style={{ colorScheme: 'light' }}>
       <head>
+        <meta name="color-scheme" content="light" />
         {/* Site-wide JSON-LD Schema: RealEstateAgent + WebSite */}
         <SchemaScript schema={siteWideSchemas} id="site-schema" />
         {/* Google Analytics */}

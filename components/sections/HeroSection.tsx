@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export default function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
+  
   const images = [
     "/Image/hero_bg_1.jpg",
     "/Image/hero_bg_2.jpg",
@@ -12,11 +15,14 @@ export default function HeroSection() {
   ];
 
   useEffect(() => {
+    // Don't animate if user prefers reduced motion
+    if (prefersReducedMotion) return;
+    
     const intervalId = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
@@ -25,7 +31,11 @@ export default function HeroSection() {
         {images.map((src, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 ${
+              prefersReducedMotion 
+                ? '' 
+                : 'transition-opacity duration-1000'
+            } ${
               index === currentImage ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -80,7 +90,11 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+      <div 
+        className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 ${
+          prefersReducedMotion ? '' : 'animate-bounce'
+        }`}
+      >
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
           <div className="w-1 h-3 bg-white/50 rounded-full" />
         </div>

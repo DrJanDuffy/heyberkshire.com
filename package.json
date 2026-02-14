@@ -12,9 +12,22 @@
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,css}\"",
-    "validate": "npm run type-check && npm run lint && npm run format:check"
+    "validate": "npm run type-check && npm run lint && npm run format:check",
+    "analyze": "ANALYZE=true npm run build",
+    "lighthouse": "lhci autorun",
+    "lighthouse:manual": "lighthouse https://heyberkshire.com --view --preset=desktop",
+    "perf": "npm run analyze && npm run lighthouse",
+    "vercel:build": "vercel build",
+    "vercel:deploy": "vercel deploy --prebuilt",
+    "vercel:prod": "vercel deploy --prod --prebuilt",
+    "cloudflare:dev": "wrangler dev",
+    "cloudflare:deploy": "wrangler deploy",
+    "cloudflare:pages": "npx @cloudflare/next-on-pages",
+    "cloudflare:build": "npm run cloudflare:pages",
+    "build:cloudflare": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
@@ -32,6 +45,9 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.2",
+    "@cloudflare/workers-types": "^4.20240806.0",
+    "@lhci/cli": "^0.13.0",
     "@types/node": "20.11.24",
     "@types/react": "18.2.63",
     "@types/react-dom": "18.2.20",
@@ -45,6 +61,8 @@
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "3.4.1",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "5.4.2"
+    "typescript": "5.4.2",
+    "wrangler": "^3.78.12",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }
