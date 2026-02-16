@@ -27,10 +27,7 @@
     "vercel:deploy": "vercel deploy --prebuilt",
     "vercel:prod": "vercel deploy --prod --prebuilt",
     "cloudflare:dev": "wrangler dev",
-    "cloudflare:deploy": "wrangler deploy",
-    "cloudflare:pages": "npx @cloudflare/next-on-pages",
-    "cloudflare:build": "npm run cloudflare:pages",
-    "build:cloudflare": "npx @cloudflare/next-on-pages"
+    "cloudflare:deploy": "wrangler deploy"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.0",
@@ -45,9 +42,9 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "copy-to-clipboard": "^3.3.3",
-    "geist": "^1.2.2",
+    "geist": "^1.7.0",
     "lucide-react": "^0.344.0",
-    "next": "^14.2.35",
+    "next": "^16.1.6",
     "openai": "^4.28.0",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
@@ -56,7 +53,6 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.2",
     "@cloudflare/workers-types": "^4.20240806.0",
     "@lhci/cli": "^0.13.0",
     "@testing-library/jest-dom": "^6.9.1",
